@@ -1,5 +1,5 @@
 //
-//  ItemCellView.swift
+//  Item.swift
 //  SplitBill
 //
 //  Created by Emmie Ohnuki on 7/17/18.
@@ -7,8 +7,9 @@
 //
 
 import Foundation
-import UIKit
 
-class ItemCellView: UITableViewCell {
+struct Item {
+    var price: Double
+    var numPeople: Int
     
 }
