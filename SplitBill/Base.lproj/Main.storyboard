@@ -12,7 +12,7 @@
         <!--Add Items-->
         <scene sceneID="FmH-U0-1hv">
             <objects>
-                <tableViewController id="6b3-2L-OvB" customClass="AddItemsViewController" customModule="SplitBill" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="6b3-2L-OvB" customClass="AddStuffViewController" customModule="SplitBill" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="feM-Yy-Id3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,7 +69,7 @@
             </objects>
             <point key="canvasLocation" x="957.60000000000002" y="-58.020989505247378"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Add Members-->
         <scene sceneID="cA3-w1-ZtA">
             <objects>
                 <tableViewController id="jjJ-Lf-go9" sceneMemberID="viewController">
@@ -92,12 +92,20 @@
                             <outlet property="delegate" destination="jjJ-Lf-go9" id="CbA-Pb-9P9"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Add Members" id="XYV-CR-rBn">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="1vI-hY-KFV"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1gf-af-1bV">
+                            <connections>
+                                <segue destination="E6S-hB-H1S" kind="show" id="IGz-Ml-pw3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1G-fm-lXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1710" y="-61"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Title-->
         <scene sceneID="ykS-lv-0qd">
             <objects>
                 <tableViewController id="E6S-hB-H1S" sceneMemberID="viewController">
@@ -120,10 +128,14 @@
                             <outlet property="delegate" destination="E6S-hB-H1S" id="XCQ-bT-OL5"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="rSm-pP-Zy9">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zuq-BR-kPW"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="JB1-dw-JwX"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bsm-He-J3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2388" y="-68"/>
+            <point key="canvasLocation" x="2447" y="-62"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U5F-ln-bGh">
