@@ -1,5 +1,5 @@
 //
-//  SelectItemsViewController.swift
+//  TotalViewController.swift
 //  SplitBill
 //
 //  Created by Emmie Ohnuki on 7/17/18.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SelectItemsViewController: UITableViewController {
+class TotalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }

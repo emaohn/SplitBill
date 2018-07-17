@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -72,7 +73,7 @@
         <!--Add Members-->
         <scene sceneID="cA3-w1-ZtA">
             <objects>
-                <tableViewController id="jjJ-Lf-go9" sceneMemberID="viewController">
+                <tableViewController id="jjJ-Lf-go9" customClass="AddMembersViewController" customModule="SplitBill" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TUR-bO-2rb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,10 +106,40 @@
             </objects>
             <point key="canvasLocation" x="1710" y="-61"/>
         </scene>
-        <!--Title-->
+        <!--Player View Controller-->
+        <scene sceneID="GNS-fu-baQ">
+            <objects>
+                <viewController id="aAd-mO-HtZ" customClass="AVPlayerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B31-vz-Ee7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Iec-Go-QFK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYv-UN-JRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1710" y="659"/>
+        </scene>
+        <!--Breakdown View Controller-->
+        <scene sceneID="qBi-ot-402">
+            <objects>
+                <viewController id="WQp-ku-HMN" customClass="BreakdownViewController" customModule="SplitBill" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zVX-dh-tkC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9Mv-D3-aUp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jZQ-ei-cFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1710" y="1369"/>
+        </scene>
+        <!--Select Items-->
         <scene sceneID="ykS-lv-0qd">
             <objects>
-                <tableViewController id="E6S-hB-H1S" sceneMemberID="viewController">
+                <tableViewController id="E6S-hB-H1S" customClass="SelectItemsViewController" customModule="SplitBill" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hCJ-PT-qd7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,7 +159,7 @@
                             <outlet property="delegate" destination="E6S-hB-H1S" id="XCQ-bT-OL5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="rSm-pP-Zy9">
+                    <navigationItem key="navigationItem" title="Select Items" id="rSm-pP-Zy9">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zuq-BR-kPW"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="JB1-dw-JwX"/>
                     </navigationItem>

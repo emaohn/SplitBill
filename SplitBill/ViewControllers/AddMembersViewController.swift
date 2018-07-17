@@ -7,6 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
+class AddMembersViewController: UITableViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
 
 
