@@ -13,6 +13,8 @@
 		E859FBC320FE99E900AE7446 /* SplitBill.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E859FBC120FE99E900AE7446 /* SplitBill.xcdatamodeld */; };
 		E859FBC520FE99EA00AE7446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E859FBC420FE99EA00AE7446 /* Assets.xcassets */; };
 		E859FBC820FE99EA00AE7446 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E859FBC620FE99EA00AE7446 /* LaunchScreen.storyboard */; };
+		E859FBD320FE9CEE00AE7446 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859FBD220FE9CEE00AE7446 /* Person.swift */; };
+		E859FBD620FE9D1500AE7446 /* ItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859FBD520FE9D1500AE7446 /* ItemCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E859FBC420FE99EA00AE7446 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E859FBC720FE99EA00AE7446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E859FBC920FE99EA00AE7446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E859FBD220FE9CEE00AE7446 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E859FBD520FE9D1500AE7446 /* ItemCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,9 @@
 		E859FBAE20FE99E900AE7446 = {
 			isa = PBXGroup;
 			children = (
+				E859FBD120FE9CC000AE7446 /* Models */,
+				E859FBD020FE9CB400AE7446 /* Views */,
+				E859FBCF20FE9C9B00AE7446 /* ViewControllers */,
 				E859FBB920FE99E900AE7446 /* SplitBill */,
 				E859FBB820FE99E900AE7446 /* Products */,
 			);
@@ -57,7 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				E859FBBA20FE99E900AE7446 /* AppDelegate.swift */,
-				E859FBBC20FE99E900AE7446 /* ViewController.swift */,
 				E859FBBE20FE99E900AE7446 /* Main.storyboard */,
 				E859FBC420FE99EA00AE7446 /* Assets.xcassets */,
 				E859FBC620FE99EA00AE7446 /* LaunchScreen.storyboard */,
@@ -65,6 +71,30 @@
 				E859FBC120FE99E900AE7446 /* SplitBill.xcdatamodeld */,
 			);
 			path = SplitBill;
+			sourceTree = "<group>";
+		};
+		E859FBCF20FE9C9B00AE7446 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E859FBBC20FE99E900AE7446 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E859FBD020FE9CB400AE7446 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E859FBD520FE9D1500AE7446 /* ItemCellView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E859FBD120FE9CC000AE7446 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E859FBD220FE9CEE00AE7446 /* Person.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +169,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E859FBC320FE99E900AE7446 /* SplitBill.xcdatamodeld in Sources */,
+				E859FBD620FE9D1500AE7446 /* ItemCellView.swift in Sources */,
 				E859FBBD20FE99E900AE7446 /* ViewController.swift in Sources */,
+				E859FBD320FE9CEE00AE7446 /* Person.swift in Sources */,
 				E859FBBB20FE99E900AE7446 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
