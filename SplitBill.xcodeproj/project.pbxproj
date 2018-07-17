@@ -8,19 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		E859FBBB20FE99E900AE7446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859FBBA20FE99E900AE7446 /* AppDelegate.swift */; };
-		E859FBBD20FE99E900AE7446 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859FBBC20FE99E900AE7446 /* ViewController.swift */; };
 		E859FBC020FE99E900AE7446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E859FBBE20FE99E900AE7446 /* Main.storyboard */; };
 		E859FBC320FE99E900AE7446 /* SplitBill.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E859FBC120FE99E900AE7446 /* SplitBill.xcdatamodeld */; };
 		E859FBC520FE99EA00AE7446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E859FBC420FE99EA00AE7446 /* Assets.xcassets */; };
 		E859FBC820FE99EA00AE7446 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E859FBC620FE99EA00AE7446 /* LaunchScreen.storyboard */; };
 		E859FBD320FE9CEE00AE7446 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859FBD220FE9CEE00AE7446 /* Person.swift */; };
 		E859FBD620FE9D1500AE7446 /* ItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859FBD520FE9D1500AE7446 /* ItemCellView.swift */; };
+		E859FBDD20FEA26400AE7446 /* addItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859FBDC20FEA26400AE7446 /* addItemsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E859FBB720FE99E900AE7446 /* SplitBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E859FBBA20FE99E900AE7446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E859FBBC20FE99E900AE7446 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E859FBBF20FE99E900AE7446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E859FBC220FE99E900AE7446 /* SplitBill.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SplitBill.xcdatamodel; sourceTree = "<group>"; };
 		E859FBC420FE99EA00AE7446 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +27,7 @@
 		E859FBC920FE99EA00AE7446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E859FBD220FE9CEE00AE7446 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		E859FBD520FE9D1500AE7446 /* ItemCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellView.swift; sourceTree = "<group>"; };
+		E859FBDC20FEA26400AE7446 /* addItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = addItemsViewController.swift; path = ../../../../../Documents/addItemsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +44,6 @@
 		E859FBAE20FE99E900AE7446 = {
 			isa = PBXGroup;
 			children = (
-				E859FBD120FE9CC000AE7446 /* Models */,
-				E859FBD020FE9CB400AE7446 /* Views */,
-				E859FBCF20FE9C9B00AE7446 /* ViewControllers */,
 				E859FBB920FE99E900AE7446 /* SplitBill */,
 				E859FBB820FE99E900AE7446 /* Products */,
 			);
@@ -63,6 +60,9 @@
 		E859FBB920FE99E900AE7446 /* SplitBill */ = {
 			isa = PBXGroup;
 			children = (
+				E859FBD120FE9CC000AE7446 /* Models */,
+				E859FBD020FE9CB400AE7446 /* Views */,
+				E859FBCF20FE9C9B00AE7446 /* ViewControllers */,
 				E859FBBA20FE99E900AE7446 /* AppDelegate.swift */,
 				E859FBBE20FE99E900AE7446 /* Main.storyboard */,
 				E859FBC420FE99EA00AE7446 /* Assets.xcassets */,
@@ -76,7 +76,7 @@
 		E859FBCF20FE9C9B00AE7446 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E859FBBC20FE99E900AE7446 /* ViewController.swift */,
+				E859FBDC20FEA26400AE7446 /* addItemsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -169,8 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E859FBC320FE99E900AE7446 /* SplitBill.xcdatamodeld in Sources */,
+				E859FBDD20FEA26400AE7446 /* addItemsViewController.swift in Sources */,
 				E859FBD620FE9D1500AE7446 /* ItemCellView.swift in Sources */,
-				E859FBBD20FE99E900AE7446 /* ViewController.swift in Sources */,
 				E859FBD320FE9CEE00AE7446 /* Person.swift in Sources */,
 				E859FBBB20FE99E900AE7446 /* AppDelegate.swift in Sources */,
 			);
