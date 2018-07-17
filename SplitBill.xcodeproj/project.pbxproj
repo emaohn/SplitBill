@@ -44,9 +44,6 @@
 		E859FBAE20FE99E900AE7446 = {
 			isa = PBXGroup;
 			children = (
-				E859FBD120FE9CC000AE7446 /* Models */,
-				E859FBD020FE9CB400AE7446 /* Views */,
-				E859FBCF20FE9C9B00AE7446 /* ViewControllers */,
 				E859FBB920FE99E900AE7446 /* SplitBill */,
 				E859FBB820FE99E900AE7446 /* Products */,
 			);
@@ -63,6 +60,9 @@
 		E859FBB920FE99E900AE7446 /* SplitBill */ = {
 			isa = PBXGroup;
 			children = (
+				E859FBD120FE9CC000AE7446 /* Models */,
+				E859FBD020FE9CB400AE7446 /* Views */,
+				E859FBCF20FE9C9B00AE7446 /* ViewControllers */,
 				E859FBBA20FE99E900AE7446 /* AppDelegate.swift */,
 				E859FBBE20FE99E900AE7446 /* Main.storyboard */,
 				E859FBC420FE99EA00AE7446 /* Assets.xcassets */,
