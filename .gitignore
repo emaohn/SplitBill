@@ -1,2 +1,7 @@
 
 *.xcuserstate
+<<<<<<< HEAD
+SplitBill/.DS_Store
+=======
+SplitBill.xcodeproj/xcuserdata/srapolu.xcuserdatad/xcschemes/xcschememanagement.plist
+>>>>>>> 6ff56ecf671022693ddcadb10ee678d90abfcfa6
