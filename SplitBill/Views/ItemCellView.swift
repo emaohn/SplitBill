@@ -13,4 +13,6 @@ class ItemCellView: UITableViewCell {
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var itemPriceLabel: UILabel!
     
+    
+    
 }
