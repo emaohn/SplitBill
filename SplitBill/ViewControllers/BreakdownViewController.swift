@@ -1,5 +1,5 @@
 //
-//  SelectItemsViewController.swift
+//  BreakdownViewController.swift
 //  SplitBill
 //
 //  Created by Emmie Ohnuki on 7/17/18.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SelectItemsViewController: UITableViewController {
+class BreakdownViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
