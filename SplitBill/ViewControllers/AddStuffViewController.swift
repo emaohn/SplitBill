@@ -11,19 +11,35 @@ import UIKit
 
 class AddStuffViewController: UITableViewController {
     
+    var items = [Item]() {
+        didSet{
+            tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "itemCellView", for: indexPath) as! ItemCellView
+        let item = items[indexPath.row]
+        cell.itemNameLabel.text = item.name
+        cell.itemPriceLabel.text = String(format:"%f", item.price)
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
     @IBAction func addItemButtonPressed(_ sender: UIBarButtonItem) {
-        var itemName: String?
-        var itemPrice: Double?
         
         // Create the alert controller
         let alertController = UIAlertController(title: "Add Item", message: "", preferredStyle: UIAlertControllerStyle.alert)
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "Enter Item Name"
-            itemName = textField.text
         }
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "$0.00"
@@ -33,8 +49,13 @@ class AddStuffViewController: UITableViewController {
             UIAlertAction in
             let itemName = alertController.textFields![0] as UITextField?
             let itemPrice = alertController.textFields![1] as UITextField?
-            //let item = Item(price: (itemPrice?.text!)!, name: (itemName?.text!)!, numPeople: 0)
-            print("item name: \((itemName?.text!)!)")
+            if let cost = Double((itemPrice?.text!)!) {
+                let item = Item(price: cost, name: (itemName?.text!)!, numPeople: 0)
+                self.items.append(item)
+                self.tableView.reloadData()
+            } else {
+                return
+            }
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {
