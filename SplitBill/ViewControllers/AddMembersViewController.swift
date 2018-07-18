@@ -10,23 +10,20 @@ import Foundation
 import UIKit
 
 class AddMembersViewController: UITableViewController {
-    var members = [Person]()
-    
+    var members = [Person]()    
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "memberCellView", for: indexPath) as! MemberCellView
-//
-//        let member = members[indexPath.row]
-//        cell.nameLabel.text = "Emmie"
-//
-//        cell.noteModificationTimeLabel.text = note.modificationTime?.convertToString() ?? "unknown"
-//
-//        return cell
-//    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "personCellView", for: indexPath) as! MemberCellView
+        let person = members[indexPath.row]
+        cell.nameLabel.text = person.name
+        cell.personSubtotalLabel.text = String(format:"%.2f", person.subtotal)
+        
+        return cell
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 1
