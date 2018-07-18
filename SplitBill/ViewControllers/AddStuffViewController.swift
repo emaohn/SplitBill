@@ -25,7 +25,7 @@ class AddStuffViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "itemCellView", for: indexPath) as! ItemCellView
         let item = items[indexPath.row]
         cell.itemNameLabel.text = item.name
-        cell.itemPriceLabel.text = String(format:"%f", item.price)
+        cell.itemPriceLabel.text = String(format:"%.2f", item.price)
         
         return cell
     }
