@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class TotalViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
