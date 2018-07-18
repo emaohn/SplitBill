@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44551AEE20FFBDD90056E805 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44551AED20FFBDD90056E805 /* Bill.swift */; };
 		E859FBBB20FE99E900AE7446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859FBBA20FE99E900AE7446 /* AppDelegate.swift */; };
 		E859FBC020FE99E900AE7446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E859FBBE20FE99E900AE7446 /* Main.storyboard */; };
 		E859FBC320FE99E900AE7446 /* SplitBill.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E859FBC120FE99E900AE7446 /* SplitBill.xcdatamodeld */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44551AED20FFBDD90056E805 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		E859FBB720FE99E900AE7446 /* SplitBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E859FBBA20FE99E900AE7446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E859FBBF20FE99E900AE7446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				E859FBD220FE9CEE00AE7446 /* Person.swift */,
 				E859FBE020FEA52000AE7446 /* Item.swift */,
+				44551AED20FFBDD90056E805 /* Bill.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				E859FBEB20FEB99500AE7446 /* BreakdownViewController.swift in Sources */,
 				E859FBE920FEB95B00AE7446 /* TotalViewController.swift in Sources */,
 				E859FBF120FECC3900AE7446 /* ItemSelectionCell.swift in Sources */,
+				44551AEE20FFBDD90056E805 /* Bill.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

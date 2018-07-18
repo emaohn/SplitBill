@@ -13,5 +13,5 @@ class ItemSelectionCell: UITableViewCell {
     
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var itemNameLabel: UILabel!
-    
+
 }

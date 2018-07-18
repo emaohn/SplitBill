@@ -64,7 +64,14 @@ class AddStuffViewController: UITableViewController {
         
         return cell
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is AddMembersViewController {
+            let vc = segue.destination as? AddMembersViewController
+            vc?.items = items
+        }
+    }
+    
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
         
     }

@@ -10,16 +10,35 @@ import Foundation
 import UIKit
 
 class SelectItemsViewController: UITableViewController {
-    let items = [Item]()
+    var items = [Item]()
+    var member = Person(name: "Name")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    }    
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
     }
     
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        items.count
-//    }
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        
-//    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "itemSelectionCell", for: indexPath) as! ItemSelectionCell
+        let item = items[indexPath.row]
+        cell.itemNameLabel.text = item.name
+        cell.priceLabel.text = String(format:"%.2f", item.price)
+    
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) {
+            if cell.accessoryType == .none {
+                cell.accessoryType = .checkmark
+                member.items.append(items[indexPath])
+            } else {
+                cell.accessoryType = .none
+            }
+        }
+    }
 }

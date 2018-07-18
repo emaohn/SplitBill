@@ -237,32 +237,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Bbt-4h-SIs" customClass="ItemSelectionCell" customModule="SplitBill" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemSelectionCell" id="Bbt-4h-SIs" customClass="ItemSelectionCell" customModule="SplitBill" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bbt-4h-SIs" id="wbV-8C-iP4">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdf-lK-QTF">
-                                            <rect key="frame" x="16" y="11" width="83" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Lj-OQ-q5M">
-                                            <rect key="frame" x="258" y="12" width="39" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="RqB-qr-3gf">
+                                            <rect key="frame" x="15" y="15" width="335" height="13.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IN-OW-Sfm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="271" height="13.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9WB-fV-nRp">
+                                                    <rect key="frame" x="296" y="0.0" width="39" height="13.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="RqB-qr-3gf" secondAttribute="bottom" constant="15" id="2GF-0u-rKE"/>
+                                        <constraint firstItem="RqB-qr-3gf" firstAttribute="leading" secondItem="wbV-8C-iP4" secondAttribute="leading" constant="15" id="WcN-an-qsh"/>
+                                        <constraint firstItem="RqB-qr-3gf" firstAttribute="top" secondItem="wbV-8C-iP4" secondAttribute="top" constant="15" id="dlf-1P-G2Y"/>
+                                        <constraint firstAttribute="trailing" secondItem="RqB-qr-3gf" secondAttribute="trailing" constant="25" id="g1D-na-OiD"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstItem="RqB-qr-3gf" firstAttribute="centerY" secondItem="Bbt-4h-SIs" secondAttribute="centerY" id="Zhk-yx-Ylo"/>
+                                </constraints>
                                 <connections>
-                                    <outlet property="itemNameLabel" destination="Hdf-lK-QTF" id="2as-TV-dom"/>
-                                    <outlet property="priceLabel" destination="5Lj-OQ-q5M" id="pcy-ur-LeZ"/>
+                                    <outlet property="itemNameLabel" destination="8IN-OW-Sfm" id="QPo-Wu-GBf"/>
+                                    <outlet property="priceLabel" destination="9WB-fV-nRp" id="AVb-ba-bRV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

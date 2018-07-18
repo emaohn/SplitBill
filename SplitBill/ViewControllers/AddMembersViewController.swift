@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 class AddMembersViewController: UITableViewController {
-    var members = [Person]()    
+    var members = [Person]()
+    var items = [Item]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +30,16 @@ class AddMembersViewController: UITableViewController {
         // 1
         return members.count
     }
+    
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is SelectItemsViewController {
+            let vc = segue.destination as? SelectItemsViewController
+            vc?.items = items
+        }
     }
 }
 
