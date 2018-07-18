@@ -9,9 +9,7 @@
 import Foundation
 import UIKit
 
-class AddItemsViewController: UITableViewController {
-    
-    var currentBill = Bill()
+class AddStuffViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,17 +27,16 @@ class AddItemsViewController: UITableViewController {
         }
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "$0.00"
-            itemPrice = textField.text as? Double
         }
         // Create the actions
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
             UIAlertAction in
-            if let _ = itemName,
-                let _ = itemPrice {
-                let item = Item(price: itemPrice!, name: itemName!, numPeople: 0)
-                currentBill.allItems.append(item)
-            }
+            let itemName = alertController.textFields![0] as UITextField?
+            let itemPrice = alertController.textFields![1] as UITextField?
+            //let item = Item(price: (itemPrice?.text!)!, name: (itemName?.text!)!, numPeople: 0)
+            print("item name: \((itemName?.text!)!)")
         }
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {
             UIAlertAction in
             NSLog("Cancel Pressed")
