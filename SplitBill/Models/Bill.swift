@@ -16,6 +16,10 @@ struct Bill {
     let grandSubtotal: Double
     var people: [Person]
     
+    func calculate() {
+        
+    }
+    
     
 }
 
