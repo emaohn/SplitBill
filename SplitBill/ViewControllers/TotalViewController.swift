@@ -13,5 +13,8 @@ class TotalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
     }
 }
