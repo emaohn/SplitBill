@@ -10,8 +10,11 @@ import Foundation
 import UIKit
 
 class TotalViewController: UIViewController {
+    var bill = Bill(members: [])
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    
 }

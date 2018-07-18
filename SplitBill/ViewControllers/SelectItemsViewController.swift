@@ -12,7 +12,6 @@ import UIKit
 class SelectItemsViewController: UITableViewController {
     var items = [Item]()
     var member = Person(name: "Name")
-    var bill = Bill()
     
     override func viewDidLoad() {
         super.viewDidLoad()

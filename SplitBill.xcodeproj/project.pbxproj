@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		44551AEE20FFBDD90056E805 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44551AED20FFBDD90056E805 /* Bill.swift */; };
+		44551AF020FFE8230056E805 /* TotalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44551AEF20FFE8230056E805 /* TotalTableView.swift */; };
+		44551AF420FFE9A40056E805 /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44551AF320FFE9A40056E805 /* TotalTableViewCell.swift */; };
 		E859FBBB20FE99E900AE7446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859FBBA20FE99E900AE7446 /* AppDelegate.swift */; };
 		E859FBC020FE99E900AE7446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E859FBBE20FE99E900AE7446 /* Main.storyboard */; };
 		E859FBC320FE99E900AE7446 /* SplitBill.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E859FBC120FE99E900AE7446 /* SplitBill.xcdatamodeld */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		44551AED20FFBDD90056E805 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		44551AEF20FFE8230056E805 /* TotalTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableView.swift; sourceTree = "<group>"; };
+		44551AF320FFE9A40056E805 /* TotalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalTableViewCell.swift; sourceTree = "<group>"; };
 		E859FBB720FE99E900AE7446 /* SplitBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E859FBBA20FE99E900AE7446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E859FBBF20FE99E900AE7446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,9 +108,11 @@
 		E859FBD020FE9CB400AE7446 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				44551AF320FFE9A40056E805 /* TotalTableViewCell.swift */,
 				E859FBF020FECC3900AE7446 /* ItemSelectionCell.swift */,
 				E859FBD520FE9D1500AE7446 /* ItemCellView.swift */,
 				E859FBEC20FEBA3000AE7446 /* MemberCellView.swift */,
+				44551AEF20FFE8230056E805 /* TotalTableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44551AF020FFE8230056E805 /* TotalTableView.swift in Sources */,
 				E859FBC320FE99E900AE7446 /* SplitBill.xcdatamodeld in Sources */,
 				E859FBDF20FEA3E500AE7446 /* AddMembersViewController.swift in Sources */,
 				E859FBE720FEB4E900AE7446 /* AddStuffViewController.swift in Sources */,
@@ -202,6 +209,7 @@
 				E859FBBB20FE99E900AE7446 /* AppDelegate.swift in Sources */,
 				E859FBED20FEBA3000AE7446 /* MemberCellView.swift in Sources */,
 				E859FBEB20FEB99500AE7446 /* BreakdownViewController.swift in Sources */,
+				44551AF420FFE9A40056E805 /* TotalTableViewCell.swift in Sources */,
 				E859FBE920FEB95B00AE7446 /* TotalViewController.swift in Sources */,
 				E859FBF120FECC3900AE7446 /* ItemSelectionCell.swift in Sources */,
 				44551AEE20FFBDD90056E805 /* Bill.swift in Sources */,

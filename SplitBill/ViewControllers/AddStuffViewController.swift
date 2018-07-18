@@ -11,7 +11,6 @@ import UIKit
 
 class AddStuffViewController: UITableViewController {
     var items = [Item]()
-    var bill = Bill()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +32,6 @@ class AddStuffViewController: UITableViewController {
             if let cost = Double((itemPrice?.text!)!) {
                 let item = Item(price: cost, name: (itemName?.text!)!)
                 self.items.append(item)
-                self.bill.allItems = self.items
                 self.tableView.reloadData()
             } else {
                 return
@@ -71,7 +69,6 @@ class AddStuffViewController: UITableViewController {
         if segue.destination is AddMembersViewController {
             let vc = segue.destination as? AddMembersViewController
             vc?.items = items
-            vc?.bill = bill
         }
     }
     

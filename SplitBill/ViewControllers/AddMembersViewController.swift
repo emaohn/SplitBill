@@ -12,7 +12,6 @@ import UIKit
 class AddMembersViewController: UITableViewController {
     var members = [Person]()
     var items = [Item]()
-    var bill = Bill()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +39,22 @@ class AddMembersViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is SelectItemsViewController {
+        guard let identifier = segue.identifier else {return}
+        
+        switch identifier {
+        case "doneWithPersons":
+            print("done w ppl")
+            let bill = Bill(members: members)
+            bill.allItems = items
+            let vc = segue.destination as? TotalViewController
+            vc?.bill = bill
+        case "backButton":
+            print("back button pressed")
+        case "addMember":
             let vc = segue.destination as? SelectItemsViewController
             vc?.items = self.items
-            vc?.bill = self.bill
+        default:
+            print("i dont recognize this")
         }
     }
 }
