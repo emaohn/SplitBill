@@ -17,16 +17,9 @@ class AddMembersViewController: UITableViewController {
         super.viewDidLoad()
     }
     
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "memberCellView", for: indexPath) as! MemberCellView
-//
-//        let member = members[indexPath.row]
-//        cell.nameLabel.text = "Emmie"
-//
-//        cell.noteModificationTimeLabel.text = note.modificationTime?.convertToString() ?? "unknown"
-//
-//        return cell
-//    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 1
