@@ -13,12 +13,12 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-//    let tipPercent: Double?
-//    let taxAmount: Double?
-//    var allItems: [Item]?
-//    let grandTotal: Double?
-//    let grandSubtotal: Double?
-//    var people: [Person]?
+    let tipPercent: Double!
+    let taxAmount: Double!
+    var allItems: [Item]!
+    let grandTotal: Double!
+    let grandSubtotal: Double!
+    var people: [Person]!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

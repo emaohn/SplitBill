@@ -10,6 +10,13 @@ import Foundation
 
 struct Item {
     var price: Double
+    var name: String
     var numPeople: Int
+    
+    init(price: Double, name: String, numPeople: Int){
+        self.price = price
+        self.name = name
+        self.numPeople = numPeople
+    }
     
 }
