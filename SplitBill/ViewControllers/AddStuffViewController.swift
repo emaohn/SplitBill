@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class AddItemsViewController: UITableViewController {
+    var items = [Item]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,10 +42,14 @@ class AddItemsViewController: UITableViewController {
         self.present(alertController, animated: true, completion: nil)
         
         print("me")
-        
-        
-        
-        
     }
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // 1
+        return items.count
+    }
+
+    @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
+        
+    }
 }

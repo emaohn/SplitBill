@@ -7,3 +7,8 @@
 //
 
 import Foundation
+import UIKit
+
+class MemberCellView: UITableViewCell {
+    @IBOutlet weak var nameLabel: UILabel!
+}

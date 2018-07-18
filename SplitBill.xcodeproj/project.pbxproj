@@ -21,6 +21,7 @@
 		E859FBE920FEB95B00AE7446 /* TotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859FBE820FEB95A00AE7446 /* TotalViewController.swift */; };
 		E859FBEB20FEB99500AE7446 /* BreakdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859FBEA20FEB99500AE7446 /* BreakdownViewController.swift */; };
 		E859FBED20FEBA3000AE7446 /* MemberCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859FBEC20FEBA3000AE7446 /* MemberCellView.swift */; };
+		E859FBF120FECC3900AE7446 /* ItemSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859FBF020FECC3900AE7446 /* ItemSelectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E859FBE820FEB95A00AE7446 /* TotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalViewController.swift; sourceTree = "<group>"; };
 		E859FBEA20FEB99500AE7446 /* BreakdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownViewController.swift; sourceTree = "<group>"; };
 		E859FBEC20FEBA3000AE7446 /* MemberCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCellView.swift; sourceTree = "<group>"; };
+		E859FBF020FECC3900AE7446 /* ItemSelectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSelectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		E859FBD020FE9CB400AE7446 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E859FBF020FECC3900AE7446 /* ItemSelectionCell.swift */,
 				E859FBD520FE9D1500AE7446 /* ItemCellView.swift */,
 				E859FBEC20FEBA3000AE7446 /* MemberCellView.swift */,
 			);
@@ -197,6 +200,7 @@
 				E859FBED20FEBA3000AE7446 /* MemberCellView.swift in Sources */,
 				E859FBEB20FEB99500AE7446 /* BreakdownViewController.swift in Sources */,
 				E859FBE920FEB95B00AE7446 /* TotalViewController.swift in Sources */,
+				E859FBF120FECC3900AE7446 /* ItemSelectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
