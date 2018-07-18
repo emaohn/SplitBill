@@ -12,6 +12,7 @@ import UIKit
 class AddMembersViewController: UITableViewController {
     var members = [Person]()
     var items = [Item]()
+    var bill = Bill()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +33,17 @@ class AddMembersViewController: UITableViewController {
     }
     
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
-        
+        for member in members {
+            member.calculateSubtotal()
+        }
+        tableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is SelectItemsViewController {
             let vc = segue.destination as? SelectItemsViewController
-            vc?.items = items
+            vc?.items = self.items
+            vc?.bill = self.bill
         }
     }
 }

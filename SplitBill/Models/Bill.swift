@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct Bill {
+class Bill {
         let tipPercent: Double = 0
         let taxAmount: Double = 0
-        static var allItems: [Item] = []
+        var allItems: [Item] = []
         let grandTotal: Double = 0
         let grandSubtotal: Double = 0
         var people: [Person] = []

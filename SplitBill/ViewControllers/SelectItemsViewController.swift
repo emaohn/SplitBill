@@ -12,6 +12,7 @@ import UIKit
 class SelectItemsViewController: UITableViewController {
     var items = [Item]()
     var member = Person(name: "Name")
+    var bill = Bill()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +36,30 @@ class SelectItemsViewController: UITableViewController {
         if let cell = tableView.cellForRow(at: indexPath) {
             if cell.accessoryType == .none {
                 cell.accessoryType = .checkmark
-                member.items.append(items[indexPath])
+                var item = items[indexPath.row]
+                member.items.append(item)
+                item.numPeople += 1
+                item.recalculateDividedPrice()
             } else {
                 cell.accessoryType = .none
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else {return}
+        
+        switch identifier {
+        case "cancelSelectItems":
+            print("cancel")
+    
+        case "doneSelectItems":
+            let vc = segue.destination as! AddMembersViewController
+            vc.members.append(self.member)
+            
+        default:
+            print("i dont recognize this")
+        }
+    }
+
 }

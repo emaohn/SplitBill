@@ -8,14 +8,18 @@
 
 import Foundation
 
-struct Item {
+class Item {
     var price: Double
     var numPeople: Int = 0
     var name: String
+    var dividedPrice = 0.0
     
     init(price: Double, name: String){
         self.price = price
         self.name = name
     }
     
+    func recalculateDividedPrice() {
+        self.dividedPrice = price / Double(numPeople)
+    }
 }
