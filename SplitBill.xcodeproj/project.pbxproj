@@ -20,6 +20,7 @@
 		E859FBE720FEB4E900AE7446 /* AddStuffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859FBE620FEB4E900AE7446 /* AddStuffViewController.swift */; };
 		E859FBE920FEB95B00AE7446 /* TotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859FBE820FEB95A00AE7446 /* TotalViewController.swift */; };
 		E859FBEB20FEB99500AE7446 /* BreakdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859FBEA20FEB99500AE7446 /* BreakdownViewController.swift */; };
+		E859FBED20FEBA3000AE7446 /* MemberCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859FBEC20FEBA3000AE7446 /* MemberCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		E859FBE620FEB4E900AE7446 /* AddStuffViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStuffViewController.swift; sourceTree = "<group>"; };
 		E859FBE820FEB95A00AE7446 /* TotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalViewController.swift; sourceTree = "<group>"; };
 		E859FBEA20FEB99500AE7446 /* BreakdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownViewController.swift; sourceTree = "<group>"; };
+		E859FBEC20FEBA3000AE7446 /* MemberCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				E859FBD520FE9D1500AE7446 /* ItemCellView.swift */,
+				E859FBEC20FEBA3000AE7446 /* MemberCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				E859FBE120FEA52000AE7446 /* Item.swift in Sources */,
 				E859FBD320FE9CEE00AE7446 /* Person.swift in Sources */,
 				E859FBBB20FE99E900AE7446 /* AppDelegate.swift in Sources */,
+				E859FBED20FEBA3000AE7446 /* MemberCellView.swift in Sources */,
 				E859FBEB20FEB99500AE7446 /* BreakdownViewController.swift in Sources */,
 				E859FBE920FEB95B00AE7446 /* TotalViewController.swift in Sources */,
 			);
