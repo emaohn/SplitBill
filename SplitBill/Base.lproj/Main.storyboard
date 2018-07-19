@@ -90,6 +90,9 @@
                     <navigationItem key="navigationItem" title="Tip &amp; Tax" id="Sb4-S1-b4X">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="E2x-hz-xjU"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="jjJ-Lf-go9" kind="show" identifier="done" id="eiH-4n-u8J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SKk-Dl-X9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,7 +101,6 @@
         <!--Add Items-->
         <scene sceneID="FmH-U0-1hv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KQa-ug-wMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="6b3-2L-OvB" customClass="AddStuffViewController" customModule="SplitBill" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="feM-Yy-Id3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -164,6 +166,7 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KQa-ug-wMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="957.60000000000002" y="-58.020989505247378"/>
         </scene>
@@ -259,7 +262,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2oK-3E-235" customClass="TotalTableView" customModule="SplitBill" customModuleProvider="target">
-                                <rect key="frame" x="15" y="85.5" width="345" height="471"/>
+                                <rect key="frame" x="15" y="129.5" width="345" height="427"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personTotalViewCell" rowHeight="100" id="fkS-RP-06J" customClass="TotalTableViewCell" customModule="SplitBill" customModuleProvider="target">
@@ -307,7 +310,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click on each person to see their breakdown!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwg-a4-EOo">
-                                <rect key="frame" x="15" y="35" width="345" height="20.5"/>
+                                <rect key="frame" x="15" y="79" width="345" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -365,7 +368,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iw5-pn-O4Y" customClass="BreakdownTableView" customModule="SplitBill" customModuleProvider="target">
-                                <rect key="frame" x="15" y="136" width="345" height="299"/>
+                                <rect key="frame" x="15" y="180" width="345" height="255"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemTableViewCell" rowHeight="60" id="5DN-kC-F44" userLabel="itemsTableViewCell" customClass="BreakdownTableViewCell" customModule="SplitBill" customModuleProvider="target">
@@ -413,7 +416,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items Purchased" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkE-zO-MoF">
-                                <rect key="frame" x="15" y="100.5" width="345" height="20.5"/>
+                                <rect key="frame" x="15" y="144.5" width="345" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -492,7 +495,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name's Breakdown" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQc-U9-Pln">
-                                <rect key="frame" x="15" y="50" width="345" height="20.5"/>
+                                <rect key="frame" x="15" y="94" width="345" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -605,7 +608,6 @@
         <!--Navigation Controller-->
         <scene sceneID="U5F-ln-bGh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MgS-QQ-Rqn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="27s-6W-xxR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AZ9-zS-qxL">
@@ -617,6 +619,7 @@
                         <segue destination="6b3-2L-OvB" kind="relationship" relationship="rootViewController" id="SQM-yD-dbN"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MgS-QQ-Rqn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.399999999999999" y="-58.020989505247378"/>
         </scene>
