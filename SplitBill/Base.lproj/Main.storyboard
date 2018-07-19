@@ -87,7 +87,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xgO-AL-Nrc"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip &amp; Tax" id="Sb4-S1-b4X">
+                    <navigationItem key="navigationItem" title="Tip &amp; Tax" id="Sb4-S1-b4X" colorLabel="IBBuiltInLabel-Red">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="iZX-Tq-s5B">
                             <connections>
                                 <segue destination="5Gk-7b-U1n" kind="unwind" identifier="back" unwindAction="unwindWithSegue:" id="8TT-4y-ZBe"/>
@@ -619,7 +619,7 @@
         <!--Navigation Controller-->
         <scene sceneID="U5F-ln-bGh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="27s-6W-xxR" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="27s-6W-xxR" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AZ9-zS-qxL">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

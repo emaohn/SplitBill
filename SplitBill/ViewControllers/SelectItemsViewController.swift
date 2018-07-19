@@ -40,8 +40,12 @@ class SelectItemsViewController: UITableViewController {
                 member.items.append(item)
                 item.numPeople += 1
                 item.recalculateDividedPrice()
-            } else {
+            } else if cell.accessoryType == .checkmark {
                 cell.accessoryType = .none
+                let item = bill.allItems[indexPath.row]
+                member.items.remove(at: indexPath.row)
+                item.numPeople -= 1
+                item.recalculateDividedPrice()
             }
         }
     }
