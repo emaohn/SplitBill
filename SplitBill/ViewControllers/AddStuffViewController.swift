@@ -67,8 +67,8 @@ class AddStuffViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is AddMembersViewController {
-            let vc = segue.destination as? AddMembersViewController
+        if segue.destination is tipTaxViewController {
+            let vc = segue.destination as? tipTaxViewController
             vc?.items = items
             vc?.members = members
         }

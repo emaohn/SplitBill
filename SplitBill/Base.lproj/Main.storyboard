@@ -94,6 +94,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="taxAmountTextfield" destination="wLx-5t-hqG" id="gsL-6o-b9d"/>
+                        <outlet property="tipPercentTextField" destination="VAK-fZ-UyC" id="izN-bx-0EW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SKk-Dl-X9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

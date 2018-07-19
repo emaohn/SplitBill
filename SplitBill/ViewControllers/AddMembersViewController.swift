@@ -13,6 +13,8 @@ class AddMembersViewController: UITableViewController {
     var members = [Person]()
     var items = [Item]()
     var personName: String = ""
+    var tax = 0.0
+    var tip = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +81,8 @@ class AddMembersViewController: UITableViewController {
         case "doneWithPersons":
             print("done w ppl")
             let bill = Bill(members: members, items: items)
+            bill.taxAmount = tax
+            bill.tipPercent = tip
             let vc = segue.destination as? TotalViewController
             vc?.bill = bill
         case "backButton":

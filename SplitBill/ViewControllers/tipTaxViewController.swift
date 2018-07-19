@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 
 class tipTaxViewController: UIViewController {
+    var items = [Item]()
+    var members = [Person]()
+    
+    @IBOutlet weak var taxAmountTextfield: UITextField!
+    @IBOutlet weak var tipPercentTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +24,17 @@ class tipTaxViewController: UIViewController {
         guard let identifier = segue.identifier else {return}
         switch identifier {
         case "done":
-            print("going to add members")
+            if segue.destination is AddMembersViewController {
+                let vc = segue.destination as? AddMembersViewController
+                vc?.items = self.items
+                vc?.members = self.members
+                if let taxAmount = Double((taxAmountTextfield.text!)) {
+                    vc?.tax = taxAmount
+                }
+                if let tipPercent = Double((tipPercentTextField.text!)) {
+                    vc?.tip = tipPercent
+                }
+            }
         default:
             print("error")
         }
