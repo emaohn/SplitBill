@@ -11,13 +11,13 @@ import UIKit
 
 class TotalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var bill = Bill(members: [], items: [])
-    
+    var person = Person(name: "Name")
     @IBOutlet weak var totalTableView: TotalTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         totalTableView.bill = bill
-        print(bill.total)
+        //print(bill.total)
         totalTableView.reloadData()
         
     }
@@ -35,8 +35,23 @@ class TotalViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        person = bill.people[indexPath.row]
+        print("\(person.name) selected")
+        self.performSegue(withIdentifier: "breakdown", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as? BreakdownViewController
-        vc?.bill = self.bill
+        guard let identifier = segue.identifier else {return}
+
+        switch identifier {
+        case "breakdown":
+            let vc = segue.destination as? BreakdownViewController
+            vc?.person = self.person
+            print("going to breakdown page")
+        default:
+            print("i dont recognize this")
+        }
+
     }
 }
