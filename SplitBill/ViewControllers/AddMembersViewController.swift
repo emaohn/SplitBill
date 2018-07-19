@@ -44,8 +44,7 @@ class AddMembersViewController: UITableViewController {
         switch identifier {
         case "doneWithPersons":
             print("done w ppl")
-            let bill = Bill(members: members)
-            bill.allItems = items
+            let bill = Bill(members: members, items: items)
             let vc = segue.destination as? TotalViewController
             vc?.bill = bill
         case "backButton":
