@@ -18,6 +18,8 @@ class TotalViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bill.calculate()
+        print(bill.total)
         totalTableView.bill = bill
         grandTotalLabel.text = "$" + String(format:"%.2f", bill.total)
         totalTableView.reloadData()

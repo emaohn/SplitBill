@@ -81,6 +81,7 @@ class AddMembersViewController: UITableViewController {
         switch identifier {
         case "doneWithPersons":
             print("done w ppl")
+            print(bill.total)
 //            let bill = Bill(members: members, items: items)
 //            bill.taxAmount = tax
 //            bill.tipPercent = tip

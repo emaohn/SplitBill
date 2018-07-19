@@ -17,11 +17,7 @@ class Bill {
         var people: [Person] = []
     
     init() {
-        for item in allItems {
-            subtotal += item.price
-        }
-        calculate()
-        total = Double((tipPercent*subtotal + subtotal + taxAmount))
+        
     }
     init(members: [Person], items: [Item]){
         self.allItems = items
@@ -32,6 +28,7 @@ class Bill {
         calculate()
         total = Double((tipPercent*subtotal + subtotal + taxAmount))
     }
+    
     
     func calculateMemberTaxAmount(person: Person) -> Double{
         let tax = taxAmount * (person.subtotal / subtotal)
@@ -50,6 +47,10 @@ class Bill {
     }
     
     func calculate(){
+        for item in allItems {
+            subtotal += item.price
+        }
+        total = Double((tipPercent*subtotal + subtotal + taxAmount))
         for person in people {
             person.total = totalMemberAmount(person: person)
         }
