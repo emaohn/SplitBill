@@ -215,7 +215,6 @@
                                         <connections>
                                             <outlet property="personNameLabel" destination="4em-PN-SJA" id="Dxs-zL-4E0"/>
                                             <outlet property="personTotalLabel" destination="dvT-fC-HTU" id="VQt-Pp-GfC"/>
-                                            <segue destination="WQp-ku-HMN" kind="show" identifier="breakdown" id="5Da-lI-fdl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -231,6 +230,7 @@
                     <navigationItem key="navigationItem" title="Grand Total Bill " id="XhD-s2-WaP"/>
                     <connections>
                         <outlet property="totalTableView" destination="2oK-3E-235" id="Lzs-yO-obS"/>
+                        <segue destination="WQp-ku-HMN" kind="show" identifier="breakdown" id="SBD-7y-YX6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lYv-UN-JRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -398,8 +398,12 @@
                         <viewLayoutGuide key="safeArea" id="9Mv-D3-aUp"/>
                     </view>
                     <connections>
+                        <outlet property="grandTotalLabel" destination="VnZ-i7-GuM" id="v9o-Or-9tP"/>
                         <outlet property="itemsTableView" destination="iw5-pn-O4Y" id="VB3-LG-PcQ"/>
                         <outlet property="personNameLabel" destination="dQc-U9-Pln" id="7CM-jr-zxu"/>
+                        <outlet property="subtotalPriceLabel" destination="ezS-NL-vwC" id="vHH-zG-BMr"/>
+                        <outlet property="taxAmountLabel" destination="iTA-Fn-Foj" id="iQL-Hg-wZH"/>
+                        <outlet property="tipAmountLabel" destination="NsG-1A-viJ" id="WLe-ie-P44"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZQ-ei-cFv" userLabel="First Responder" sceneMemberID="firstResponder"/>

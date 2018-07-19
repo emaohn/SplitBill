@@ -15,17 +15,22 @@ class BreakdownViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var personNameLabel: UILabel!
     @IBOutlet weak var itemsTableView: BreakdownTableView!
+    @IBOutlet weak var subtotalPriceLabel: UILabel!
+    @IBOutlet weak var taxAmountLabel: UILabel!
+    @IBOutlet weak var tipAmountLabel: UILabel!
+    @IBOutlet weak var grandTotalLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        personNameLabel.text = person.name
+        personNameLabel.text = person.name + "'s Breakdown"
+        subtotalPriceLabel.text = "$" + String(format: "%.2f", person.subtotal)
+        taxAmountLabel.text = "$" + String(format: "%.2f", person.tax)
+        tipAmountLabel.text = "$" + String(format: "%.2f", person.tip)
+        grandTotalLabel.text = "$" + String(format: "%.2f", person.total)
         itemsTableView.reloadData()
-        print(person.name + "hello")
-    
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(person.items.count)
         return (person.items.count)
     }
     
