@@ -35,7 +35,7 @@ class tipTaxViewController: UIViewController {
                     print(bill.taxAmount)
                 }
                 if let tipPercent = Double((tipPercentTextField.text!)) {
-                    vc?.bill.tipPercent = tipPercent
+                    vc?.bill.tipPercent = tipPercent/100
                     print(bill.tipPercent)
                 }
             }
