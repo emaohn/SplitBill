@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class TotalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var bill = Bill(members: [], items: [])
+    var bill = Bill()
     var person = Person(name: "Name")
     
     @IBOutlet weak var totalTableView: TotalTableView!

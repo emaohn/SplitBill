@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 
 class SelectItemsViewController: UITableViewController {
-    var items = [Item]()
+//    var items = [Item]()
     var member = Person(name: "Name")
+    var bill = Bill()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,12 +20,12 @@ class SelectItemsViewController: UITableViewController {
     }    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return bill.allItems.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "itemSelectionCell", for: indexPath) as! ItemSelectionCell
-        let item = items[indexPath.row]
+        let item = bill.allItems[indexPath.row]
         cell.itemNameLabel.text = item.name
         cell.priceLabel.text = String(format:"%.2f", item.price)
     
@@ -35,7 +36,7 @@ class SelectItemsViewController: UITableViewController {
         if let cell = tableView.cellForRow(at: indexPath) {
             if cell.accessoryType == .none {
                 cell.accessoryType = .checkmark
-                var item = items[indexPath.row]
+                let item = bill.allItems[indexPath.row]
                 member.items.append(item)
                 item.numPeople += 1
                 item.recalculateDividedPrice()
@@ -54,7 +55,7 @@ class SelectItemsViewController: UITableViewController {
     
         case "doneSelectItems":
             let vc = segue.destination as! AddMembersViewController
-            vc.members.append(self.member)
+            vc.bill.people.append(self.member)
             
         default:
             print("i dont recognize this")

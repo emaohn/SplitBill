@@ -16,6 +16,13 @@ class Bill {
         var subtotal: Double = 0
         var people: [Person] = []
     
+    init() {
+        for item in allItems {
+            subtotal += item.price
+        }
+        calculate()
+        total = Double((tipPercent*subtotal + subtotal + taxAmount))
+    }
     init(members: [Person], items: [Item]){
         self.allItems = items
         for item in allItems {

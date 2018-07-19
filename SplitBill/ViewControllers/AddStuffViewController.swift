@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 
 class AddStuffViewController: UITableViewController {
-    var items = [Item]()
-    var members = [Person]()
+    var bill = Bill()
+//    var items = [Item]()
+//    var members = [Person]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,7 @@ class AddStuffViewController: UITableViewController {
             let itemPrice = alertController.textFields![1] as UITextField?
             if let cost = Double((itemPrice?.text!)!) {
                 let item = Item(price: cost, name: (itemName?.text!)!)
-                self.items.append(item)
+                self.bill.allItems.append(item)
                 self.tableView.reloadData()
             } else {
                 return
@@ -54,12 +55,12 @@ class AddStuffViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 1
-        return items.count
+        return bill.allItems.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "itemCellView", for: indexPath) as! ItemCellView
-        let item = items[indexPath.row]
+        let item = bill.allItems[indexPath.row]
         cell.itemNameLabel.text = item.name
         cell.itemPriceLabel.text = "$" + String(format:"%.2f", item.price)
         
@@ -69,8 +70,9 @@ class AddStuffViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is tipTaxViewController {
             let vc = segue.destination as? tipTaxViewController
-            vc?.items = items
-            vc?.members = members
+//            vc?.items = items
+//            vc?.members = members
+                vc?.bill = self.bill
         }
     }
     

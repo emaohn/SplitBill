@@ -10,11 +10,12 @@ import Foundation
 import UIKit
 
 class AddMembersViewController: UITableViewController {
-    var members = [Person]()
-    var items = [Item]()
+//    var members = [Person]()
+//    var items = [Item]()
     var personName: String = ""
-    var tax = 0.0
-    var tip = 0.0
+    var bill = Bill()
+//    var tax = 0.0
+//    var tip = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,7 @@ class AddMembersViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personCellView", for: indexPath) as! MemberCellView
-        let person = members[indexPath.row]
+        let person = bill.people[indexPath.row]
         cell.nameLabel.text = person.name
         cell.personSubtotalLabel.text = String(format:"%.2f", person.subtotal)
         
@@ -34,7 +35,7 @@ class AddMembersViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 1
-        return members.count
+        return bill.people.count
         
     }
     
@@ -68,7 +69,7 @@ class AddMembersViewController: UITableViewController {
 
     
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
-        for member in members {
+        for member in bill.people {
             member.calculateSubtotal()
         }
         tableView.reloadData()
@@ -80,19 +81,21 @@ class AddMembersViewController: UITableViewController {
         switch identifier {
         case "doneWithPersons":
             print("done w ppl")
-            let bill = Bill(members: members, items: items)
-            bill.taxAmount = tax
-            bill.tipPercent = tip
+//            let bill = Bill(members: members, items: items)
+//            bill.taxAmount = tax
+//            bill.tipPercent = tip
             let vc = segue.destination as? TotalViewController
             vc?.bill = bill
         case "backButton":
             let vc = segue.destination as? AddStuffViewController
-            vc?.items = self.items
-            vc?.members = self.members
+//            vc?.items = self.items
+//            vc?.members = self.members
+                vc?.bill = self.bill
         case "moveToSelectItems":
             let vc = segue.destination as? SelectItemsViewController
-            vc?.items = self.items
-            vc?.member.name = self.personName
+//            vc?.items = self.items
+           vc?.member.name = self.personName
+                vc?.bill = self.bill
 
         default:
             print("i dont recognize this")
