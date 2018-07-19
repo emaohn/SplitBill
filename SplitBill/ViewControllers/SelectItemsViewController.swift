@@ -39,8 +39,9 @@ class SelectItemsViewController: UITableViewController {
                 member.items.append(item)
                 item.numPeople += 1
                 item.recalculateDividedPrice()
-            } else {
+            } else if cell.accessoryType == .checkmark {
                 cell.accessoryType = .none
+                member.items.remove(at: indexPath.row)
             }
         }
     }
