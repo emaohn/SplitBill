@@ -11,6 +11,7 @@ import UIKit
 
 class AddStuffViewController: UITableViewController {
     var items = [Item]()
+    var members = [Person]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,7 @@ class AddStuffViewController: UITableViewController {
             textField.placeholder = "Enter Item Name"
         }
         alertController.addTextField { (textField : UITextField!) -> Void in
-            textField.placeholder = "$0.00"
+            textField.placeholder = "Decimal Price w/o Dollar Sign:)"
         }
         // Create the actions
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
@@ -60,7 +61,7 @@ class AddStuffViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "itemCellView", for: indexPath) as! ItemCellView
         let item = items[indexPath.row]
         cell.itemNameLabel.text = item.name
-        cell.itemPriceLabel.text = String(format:"%.2f", item.price)
+        cell.itemPriceLabel.text = "$" + String(format:"%.2f", item.price)
         
         return cell
     }
@@ -69,6 +70,7 @@ class AddStuffViewController: UITableViewController {
         if segue.destination is AddMembersViewController {
             let vc = segue.destination as? AddMembersViewController
             vc?.items = items
+            vc?.members = members
         }
     }
     

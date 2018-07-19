@@ -82,7 +82,9 @@ class AddMembersViewController: UITableViewController {
             let vc = segue.destination as? TotalViewController
             vc?.bill = bill
         case "backButton":
-            print("back button pressed")
+            let vc = segue.destination as? AddStuffViewController
+            vc?.items = self.items
+            vc?.members = self.members
         case "moveToSelectItems":
             let vc = segue.destination as? SelectItemsViewController
             vc?.items = self.items
