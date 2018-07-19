@@ -212,6 +212,7 @@
                                         <connections>
                                             <outlet property="personNameLabel" destination="4em-PN-SJA" id="Dxs-zL-4E0"/>
                                             <outlet property="personTotalLabel" destination="dvT-fC-HTU" id="VQt-Pp-GfC"/>
+                                            <segue destination="WQp-ku-HMN" kind="show" id="sFL-8n-8Jd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -240,13 +241,22 @@
                     <view key="view" contentMode="scaleToFill" id="zVX-dh-tkC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9s-2d-tnp">
+                                <rect key="frame" x="147" y="174" width="37" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9Mv-D3-aUp"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZQ-ei-cFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1710" y="1369"/>
+            <point key="canvasLocation" x="1709.5999999999999" y="1368.6656671664168"/>
         </scene>
         <!--Select Items-->
         <scene sceneID="ykS-lv-0qd">
