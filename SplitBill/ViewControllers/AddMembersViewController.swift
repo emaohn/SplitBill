@@ -17,6 +17,9 @@ class AddMembersViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    @IBAction func addButtonPressed(_ sender: Any) {
+        addMembersButtonPressed(self)
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personCellView", for: indexPath) as! MemberCellView
@@ -44,7 +47,7 @@ class AddMembersViewController: UITableViewController {
             UIAlertAction in
             if let personNameTextField = alertController.textFields![0] as UITextField? {
                 self.personName = personNameTextField.text!
-                print(self.personName)
+                self.performSegue(withIdentifier: "moveToSelectItems", sender: self)
             } else {return}
         }
         
@@ -80,8 +83,7 @@ class AddMembersViewController: UITableViewController {
             vc?.bill = bill
         case "backButton":
             print("back button pressed")
-        case "addMember":
-            addMembersButtonPressed(self)
+        case "moveToSelectItems":
             let vc = segue.destination as? SelectItemsViewController
             vc?.items = self.items
             vc?.member.name = self.personName

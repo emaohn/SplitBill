@@ -153,11 +153,14 @@
                             </barButtonItem>
                             <barButtonItem systemItem="add" id="1gf-af-1bV">
                                 <connections>
-                                    <segue destination="E6S-hB-H1S" kind="show" identifier="addMember" id="IGz-Ml-pw3"/>
+                                    <action selector="addButtonPressed:" destination="jjJ-Lf-go9" id="Uga-iy-qVt"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <segue destination="E6S-hB-H1S" kind="show" identifier="moveToSelectItems" id="3Vi-jQ-qKt"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1G-fm-lXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Shk-M8-3aK" userLabel="Exit" sceneMemberID="exit"/>
