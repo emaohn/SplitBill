@@ -10,12 +10,16 @@ import Foundation
 import UIKit
 
 class AddStuffViewController: UITableViewController {
+<<<<<<< HEAD
     
     var items = [Item]() {
         didSet{
             tableView.reloadData()
         }
     }
+=======
+    var items = [Item]()
+>>>>>>> origin/sakura/emmie-combined
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,14 +54,22 @@ class AddStuffViewController: UITableViewController {
             let itemName = alertController.textFields![0] as UITextField?
             let itemPrice = alertController.textFields![1] as UITextField?
             if let cost = Double((itemPrice?.text!)!) {
+<<<<<<< HEAD
                 let item = Item(price: cost, name: (itemName?.text!)!, numPeople: 0)
+=======
+                let item = Item(price: cost, name: (itemName?.text!)!)
+>>>>>>> origin/sakura/emmie-combined
                 self.items.append(item)
                 self.tableView.reloadData()
             } else {
                 return
             }
         }
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> origin/sakura/emmie-combined
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {
             UIAlertAction in
             NSLog("Cancel Pressed")
@@ -72,4 +84,31 @@ class AddStuffViewController: UITableViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+<<<<<<< HEAD
+=======
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // 1
+        return items.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "itemCellView", for: indexPath) as! ItemCellView
+        let item = items[indexPath.row]
+        cell.itemNameLabel.text = item.name
+        cell.itemPriceLabel.text = String(format:"%.2f", item.price)
+        
+        return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is AddMembersViewController {
+            let vc = segue.destination as? AddMembersViewController
+            vc?.items = items
+        }
+    }
+    
+    @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
+        
+    }
+>>>>>>> origin/sakura/emmie-combined
 }

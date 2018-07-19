@@ -12,6 +12,7 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+<<<<<<< HEAD
       var window: UIWindow?
 //    let tipPercent: Double!
 //    let taxAmount: Double!
@@ -19,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    let grandTotal: Double!
 //    let grandSubtotal: Double!
 //    var people: [Person]!
+=======
+    var window: UIWindow?
+>>>>>>> origin/sakura/emmie-combined
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

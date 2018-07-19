@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		440E65E120FED64B008D00CB /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440E65E020FED64B008D00CB /* Bill.swift */; };
+=======
+		44551AEE20FFBDD90056E805 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44551AED20FFBDD90056E805 /* Bill.swift */; };
+		44551AF020FFE8230056E805 /* TotalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44551AEF20FFE8230056E805 /* TotalTableView.swift */; };
+		44551AF420FFE9A40056E805 /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44551AF320FFE9A40056E805 /* TotalTableViewCell.swift */; };
+>>>>>>> origin/sakura/emmie-combined
 		E859FBBB20FE99E900AE7446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859FBBA20FE99E900AE7446 /* AppDelegate.swift */; };
 		E859FBC020FE99E900AE7446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E859FBBE20FE99E900AE7446 /* Main.storyboard */; };
 		E859FBC320FE99E900AE7446 /* SplitBill.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E859FBC120FE99E900AE7446 /* SplitBill.xcdatamodeld */; };
@@ -22,7 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		440E65E020FED64B008D00CB /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+=======
+		44551AED20FFBDD90056E805 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		44551AEF20FFE8230056E805 /* TotalTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableView.swift; sourceTree = "<group>"; };
+		44551AF320FFE9A40056E805 /* TotalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalTableViewCell.swift; sourceTree = "<group>"; };
+>>>>>>> origin/sakura/emmie-combined
 		E859FBB720FE99E900AE7446 /* SplitBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E859FBBA20FE99E900AE7446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E859FBBF20FE99E900AE7446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,7 +106,15 @@
 		E859FBD020FE9CB400AE7446 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				E859FBD520FE9D1500AE7446 /* ItemCellView.swift */,
+=======
+				44551AF320FFE9A40056E805 /* TotalTableViewCell.swift */,
+				E859FBF020FECC3900AE7446 /* ItemSelectionCell.swift */,
+				E859FBD520FE9D1500AE7446 /* ItemCellView.swift */,
+				E859FBEC20FEBA3000AE7446 /* MemberCellView.swift */,
+				44551AEF20FFE8230056E805 /* TotalTableView.swift */,
+>>>>>>> origin/sakura/emmie-combined
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -104,7 +124,11 @@
 			children = (
 				E859FBD220FE9CEE00AE7446 /* Person.swift */,
 				E859FBE020FEA52000AE7446 /* Item.swift */,
+<<<<<<< HEAD
 				440E65E020FED64B008D00CB /* Bill.swift */,
+=======
+				44551AED20FFBDD90056E805 /* Bill.swift */,
+>>>>>>> origin/sakura/emmie-combined
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44551AF020FFE8230056E805 /* TotalTableView.swift in Sources */,
 				E859FBC320FE99E900AE7446 /* SplitBill.xcdatamodeld in Sources */,
 				E859FBDF20FEA3E500AE7446 /* AddMembersViewController.swift in Sources */,
 				E859FBE720FEB4E900AE7446 /* AddStuffViewController.swift in Sources */,
@@ -189,6 +214,15 @@
 				E859FBD320FE9CEE00AE7446 /* Person.swift in Sources */,
 				440E65E120FED64B008D00CB /* Bill.swift in Sources */,
 				E859FBBB20FE99E900AE7446 /* AppDelegate.swift in Sources */,
+<<<<<<< HEAD
+=======
+				E859FBED20FEBA3000AE7446 /* MemberCellView.swift in Sources */,
+				E859FBEB20FEB99500AE7446 /* BreakdownViewController.swift in Sources */,
+				44551AF420FFE9A40056E805 /* TotalTableViewCell.swift in Sources */,
+				E859FBE920FEB95B00AE7446 /* TotalViewController.swift in Sources */,
+				E859FBF120FECC3900AE7446 /* ItemSelectionCell.swift in Sources */,
+				44551AEE20FFBDD90056E805 /* Bill.swift in Sources */,
+>>>>>>> origin/sakura/emmie-combined
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +367,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+<<<<<<< HEAD
 				DEVELOPMENT_TEAM = "";
+=======
+				DEVELOPMENT_TEAM = 8MXTC6QBRL;
+>>>>>>> origin/sakura/emmie-combined
 				INFOPLIST_FILE = SplitBill/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -351,7 +389,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+<<<<<<< HEAD
 				DEVELOPMENT_TEAM = "";
+=======
+				DEVELOPMENT_TEAM = 8MXTC6QBRL;
+>>>>>>> origin/sakura/emmie-combined
 				INFOPLIST_FILE = SplitBill/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

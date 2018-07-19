@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Person {
+class Person {
     var name: String
     var total: Double
     var subtotal: Double
@@ -19,5 +19,12 @@ struct Person {
         self.total = 0.0
         self.subtotal = 0.0
         self.items = []
+    }
+    
+    func calculateSubtotal(){
+        subtotal = 0
+        for item in items {
+            subtotal += item.dividedPrice
+        }
     }
 }
