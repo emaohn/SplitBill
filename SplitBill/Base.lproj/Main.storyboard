@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="27s-6W-xxR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -15,7 +15,7 @@
         <!--Tip & Tax-->
         <scene sceneID="1f5-i0-Bbx">
             <objects>
-                <viewController id="mdR-lB-CcE" sceneMemberID="viewController">
+                <viewController id="mdR-lB-CcE" customClass="tipTaxViewController" customModule="SplitBill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h7w-js-6kt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,37 +26,37 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="Anq-I7-Am1">
                                         <rect key="frame" x="24" y="24" width="297" height="155"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="dHQ-Vb-ezp">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="dHQ-Vb-ezp">
                                                 <rect key="frame" x="0.0" y="0.0" width="297" height="40"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpt-FT-hxm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="42" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tax Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpt-FT-hxm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="91" height="40"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wLx-5t-hqG">
-                                                        <rect key="frame" x="142" y="0.0" width="155" height="40"/>
+                                                        <rect key="frame" x="216" y="0.0" width="81" height="40"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Y9n-tw-J8d">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="Y9n-tw-J8d">
                                                 <rect key="frame" x="0.0" y="115" width="297" height="40"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4c-XE-0Dp">
-                                                        <rect key="frame" x="0.0" y="0.0" width="42" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4c-XE-0Dp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="40"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VAK-fZ-UyC">
-                                                        <rect key="frame" x="92" y="0.0" width="205" height="40"/>
+                                                        <rect key="frame" x="212.5" y="0.0" width="84.5" height="40"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -88,15 +88,16 @@
                         <viewLayoutGuide key="safeArea" id="xgO-AL-Nrc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tip &amp; Tax" id="Sb4-S1-b4X">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="E2x-hz-xjU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="E2x-hz-xjU">
+                            <connections>
+                                <segue destination="jjJ-Lf-go9" kind="show" identifier="done" id="eFb-Rz-J2E"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="jjJ-Lf-go9" kind="show" identifier="done" id="eiH-4n-u8J"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SKk-Dl-X9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1321" y="-725"/>
+            <point key="canvasLocation" x="1710" y="-800"/>
         </scene>
         <!--Add Items-->
         <scene sceneID="FmH-U0-1hv">
@@ -228,7 +229,7 @@
                     <navigationItem key="navigationItem" title="Add Members" id="XYV-CR-rBn">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="E0S-jp-ai9">
                             <connections>
-                                <segue destination="Shk-M8-3aK" kind="unwind" identifier="backButton" unwindAction="unwindWithSegue:" id="wjd-MZ-gsx"/>
+                                <segue destination="Shk-M8-3aK" kind="unwind" unwindAction="unwindWithSegue:" id="8yr-uy-8Jb"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>

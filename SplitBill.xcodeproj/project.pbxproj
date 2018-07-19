@@ -27,6 +27,7 @@
 		E85E9CBB2100FA7B00B8D663 /* BreakdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85E9CBA2100FA7B00B8D663 /* BreakdownViewController.swift */; };
 		E85E9CBF2100FB0F00B8D663 /* BreakdownTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85E9CBE2100FB0F00B8D663 /* BreakdownTableView.swift */; };
 		E85E9CC32100FD9100B8D663 /* BreakdownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85E9CC22100FD9100B8D663 /* BreakdownTableViewCell.swift */; };
+		E8946C8121012B7900351C64 /* tipTaxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8946C8021012B7900351C64 /* tipTaxViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		E85E9CBA2100FA7B00B8D663 /* BreakdownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakdownViewController.swift; sourceTree = "<group>"; };
 		E85E9CBE2100FB0F00B8D663 /* BreakdownTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownTableView.swift; sourceTree = "<group>"; };
 		E85E9CC22100FD9100B8D663 /* BreakdownTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakdownTableViewCell.swift; sourceTree = "<group>"; };
+		E8946C8021012B7900351C64 /* tipTaxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipTaxViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				E859FBDE20FEA3E500AE7446 /* AddMembersViewController.swift */,
 				E859FBE220FEA69C00AE7446 /* SelectItemsViewController.swift */,
 				E859FBE820FEB95A00AE7446 /* TotalViewController.swift */,
+				E8946C8021012B7900351C64 /* tipTaxViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				E859FBDF20FEA3E500AE7446 /* AddMembersViewController.swift in Sources */,
 				E859FBE720FEB4E900AE7446 /* AddStuffViewController.swift in Sources */,
 				E859FBE320FEA69C00AE7446 /* SelectItemsViewController.swift in Sources */,
+				E8946C8121012B7900351C64 /* tipTaxViewController.swift in Sources */,
 				E859FBD620FE9D1500AE7446 /* ItemCellView.swift in Sources */,
 				E859FBE120FEA52000AE7446 /* Item.swift in Sources */,
 				E859FBD320FE9CEE00AE7446 /* Person.swift in Sources */,
