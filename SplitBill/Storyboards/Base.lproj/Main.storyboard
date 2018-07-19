@@ -12,82 +12,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add Items-->
-        <scene sceneID="FmH-U0-1hv">
-            <objects>
-                <tableViewController id="6b3-2L-OvB" customClass="AddStuffViewController" customModule="SplitBill" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="feM-Yy-Id3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCellView" rowHeight="100" id="SNR-Ng-ipr" customClass="ItemCellView" customModule="SplitBill" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SNR-Ng-ipr" id="FQe-qT-fu0">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Zj9-VT-38b">
-                                            <rect key="frame" x="31" y="26" width="313" height="48"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMm-99-HdJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="211" height="48"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IpP-lq-i0c">
-                                                    <rect key="frame" x="236" y="0.0" width="77" height="48"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Zj9-VT-38b" firstAttribute="leading" secondItem="FQe-qT-fu0" secondAttribute="leadingMargin" constant="15" id="CEA-u7-dWu"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Zj9-VT-38b" secondAttribute="trailing" constant="15" id="WsN-Nl-9rU"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Zj9-VT-38b" secondAttribute="bottom" constant="15" id="mtE-F9-nig"/>
-                                        <constraint firstItem="Zj9-VT-38b" firstAttribute="top" secondItem="FQe-qT-fu0" secondAttribute="topMargin" constant="15" id="unb-ns-xlY"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <constraints>
-                                    <constraint firstItem="Zj9-VT-38b" firstAttribute="centerY" secondItem="SNR-Ng-ipr" secondAttribute="centerY" id="xXb-oy-OPE"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="itemNameLabel" destination="TMm-99-HdJ" id="hXk-Gx-taw"/>
-                                    <outlet property="itemPriceLabel" destination="IpP-lq-i0c" id="hys-wr-GQw"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="6b3-2L-OvB" id="rrg-YF-KwE"/>
-                            <outlet property="delegate" destination="6b3-2L-OvB" id="lJf-PV-Nv1"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Add Items" id="hhK-P3-VS1">
-                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="7p2-wH-pxP">
-                            <connections>
-                                <action selector="addItemButtonPressed:" destination="6b3-2L-OvB" id="Sk0-Ea-sGo"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="BiX-HX-mKz">
-                            <connections>
-                                <segue destination="jjJ-Lf-go9" kind="show" identifier="done" id="KPS-9e-c56"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KQa-ug-wMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="957.60000000000002" y="-58.020989505247378"/>
-        </scene>
         <!--Add Members-->
         <scene sceneID="cA3-w1-ZtA">
             <objects>
-                <tableViewController id="jjJ-Lf-go9" customClass="AddMembersViewController" customModule="SplitBill" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="UITableViewController-jjJ-Lf-go9" id="jjJ-Lf-go9" customClass="AddMembersViewController" customModule="SplitBill" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TUR-bO-2rb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -215,7 +143,6 @@
                                         <connections>
                                             <outlet property="personNameLabel" destination="4em-PN-SJA" id="Dxs-zL-4E0"/>
                                             <outlet property="personTotalLabel" destination="dvT-fC-HTU" id="VQt-Pp-GfC"/>
-                                            <segue destination="WQp-ku-HMN" kind="show" identifier="breakdown" id="5Da-lI-fdl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -231,6 +158,7 @@
                     <navigationItem key="navigationItem" title="Grand Total Bill " id="XhD-s2-WaP"/>
                     <connections>
                         <outlet property="totalTableView" destination="2oK-3E-235" id="Lzs-yO-obS"/>
+                        <segue destination="WQp-ku-HMN" kind="show" identifier="breakdown" id="SBD-7y-YX6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lYv-UN-JRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -246,7 +174,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iw5-pn-O4Y" customClass="BreakdownTableView" customModule="SplitBill" customModuleProvider="target">
-                                <rect key="frame" x="15" y="180" width="345" height="255"/>
+                                <rect key="frame" x="15" y="136" width="345" height="299"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemTableViewCell" rowHeight="60" id="5DN-kC-F44" userLabel="itemsTableViewCell" customClass="BreakdownTableViewCell" customModule="SplitBill" customModuleProvider="target">
@@ -294,7 +222,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items Purchased" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkE-zO-MoF">
-                                <rect key="frame" x="15" y="144.5" width="345" height="20.5"/>
+                                <rect key="frame" x="15" y="100.5" width="345" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -373,7 +301,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name's Breakdown" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQc-U9-Pln">
-                                <rect key="frame" x="15" y="94" width="345" height="20.5"/>
+                                <rect key="frame" x="15" y="50" width="345" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -398,8 +326,12 @@
                         <viewLayoutGuide key="safeArea" id="9Mv-D3-aUp"/>
                     </view>
                     <connections>
+                        <outlet property="grandTotalLabel" destination="VnZ-i7-GuM" id="v9o-Or-9tP"/>
                         <outlet property="itemsTableView" destination="iw5-pn-O4Y" id="VB3-LG-PcQ"/>
                         <outlet property="personNameLabel" destination="dQc-U9-Pln" id="7CM-jr-zxu"/>
+                        <outlet property="subtotalPriceLabel" destination="ezS-NL-vwC" id="vHH-zG-BMr"/>
+                        <outlet property="taxAmountLabel" destination="iTA-Fn-Foj" id="iQL-Hg-wZH"/>
+                        <outlet property="tipAmountLabel" destination="NsG-1A-viJ" id="WLe-ie-P44"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZQ-ei-cFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -490,12 +422,22 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="6b3-2L-OvB" kind="relationship" relationship="rootViewController" id="SQM-yD-dbN"/>
+                        <segue destination="JBQ-GH-fMe" kind="relationship" relationship="rootViewController" id="SQM-yD-dbN"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MgS-QQ-Rqn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.399999999999999" y="-58.020989505247378"/>
+        </scene>
+        <!--AddStuff-->
+        <scene sceneID="XLz-vG-FV8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddStuff" id="JBQ-GH-fMe" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Dud-nR-kqo"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Lm-fo-Ycx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.60000000000002" y="-58.020989505247378"/>
         </scene>
     </scenes>
 </document>
