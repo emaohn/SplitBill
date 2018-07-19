@@ -13,15 +13,19 @@ class Person {
     var total: Double
     var subtotal: Double
     var items: [Item]
+    var tax: Double
+    var tip: Double
     
     init(name: String) {
         self.name = name
         self.total = 0.0
         self.subtotal = 0.0
         self.items = []
+        self.tax = 0.0
+        self.tip = 0.0
     }
     
-    func calculateSubtotal(){
+    func calculateSubtotal() {
         subtotal = 0
         for item in items {
             subtotal += item.dividedPrice

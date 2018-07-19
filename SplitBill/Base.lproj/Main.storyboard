@@ -242,11 +242,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iw5-pn-O4Y">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iw5-pn-O4Y" customClass="BreakdownTableView" customModule="SplitBill" customModuleProvider="target">
                                 <rect key="frame" x="15" y="180" width="345" height="255"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="5DN-kC-F44">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemTableViewCell" rowHeight="60" id="5DN-kC-F44" userLabel="itemsTableViewCell" customClass="BreakdownTableViewCell" customModule="SplitBill" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="345" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5DN-kC-F44" id="w1R-3Y-gKZ">
@@ -279,6 +279,10 @@
                                         <constraints>
                                             <constraint firstItem="p0Y-5i-DkQ" firstAttribute="centerY" secondItem="5DN-kC-F44" secondAttribute="centerY" id="heA-pX-bAe"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="itemNameLabel" destination="jha-9d-f0g" id="iWu-XR-vOU"/>
+                                            <outlet property="itemPriceLabel" destination="qPt-mb-fqI" id="nmd-xl-k7j"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -386,6 +390,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Mv-D3-aUp"/>
                     </view>
+                    <connections>
+                        <outlet property="itemsTableView" destination="iw5-pn-O4Y" id="VB3-LG-PcQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZQ-ei-cFv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

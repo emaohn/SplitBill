@@ -35,4 +35,8 @@ class TotalViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as? BreakdownViewController
+        vc?.bill = self.bill
+    }
 }

@@ -27,11 +27,15 @@ class Bill {
     }
     
     func calculateMemberTaxAmount(person: Person) -> Double{
-        return taxAmount * (person.subtotal / subtotal)
+        let tax = taxAmount * (person.subtotal / subtotal)
+        person.tax = tax
+        return tax
     }
     
     func calculateMemberTipAmount(person: Person) -> Double{
-        return tipPercent * person.subtotal
+        let tip = tipPercent * person.subtotal
+        person.tip = tip
+        return tip
     }
     
     func totalMemberAmount (person: Person) -> Double{
@@ -41,7 +45,6 @@ class Bill {
     func calculate(){
         for person in people {
             person.total = totalMemberAmount(person: person)
-           // total += person.total
         }
     }
 }
