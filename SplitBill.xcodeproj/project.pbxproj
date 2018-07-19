@@ -27,7 +27,11 @@
 		E85E9CBB2100FA7B00B8D663 /* BreakdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85E9CBA2100FA7B00B8D663 /* BreakdownViewController.swift */; };
 		E85E9CBF2100FB0F00B8D663 /* BreakdownTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85E9CBE2100FB0F00B8D663 /* BreakdownTableView.swift */; };
 		E85E9CC32100FD9100B8D663 /* BreakdownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85E9CC22100FD9100B8D663 /* BreakdownTableViewCell.swift */; };
+<<<<<<< HEAD
+		E8946C7B21011BC300351C64 /* AddStuff.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8946C7A21011BC300351C64 /* AddStuff.storyboard */; };
+=======
 		E8946C792101186200351C64 /* AddStuff.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8946C782101186200351C64 /* AddStuff.storyboard */; };
+>>>>>>> 828bccbbdab1b0043580c0d16d94e3dfad39d6ed
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +57,11 @@
 		E85E9CBA2100FA7B00B8D663 /* BreakdownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakdownViewController.swift; sourceTree = "<group>"; };
 		E85E9CBE2100FB0F00B8D663 /* BreakdownTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownTableView.swift; sourceTree = "<group>"; };
 		E85E9CC22100FD9100B8D663 /* BreakdownTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakdownTableViewCell.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		E8946C7A21011BC300351C64 /* AddStuff.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddStuff.storyboard; sourceTree = "<group>"; };
+=======
 		E8946C782101186200351C64 /* AddStuff.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddStuff.storyboard; sourceTree = "<group>"; };
+>>>>>>> 828bccbbdab1b0043580c0d16d94e3dfad39d6ed
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +94,11 @@
 		E859FBB920FE99E900AE7446 /* SplitBill */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+				E8946C7C21011BD000351C64 /* Storyboards */,
+=======
 				E85E9CC4210117E000B8D663 /* Storyboards */,
+>>>>>>> 828bccbbdab1b0043580c0d16d94e3dfad39d6ed
 				E859FBD120FE9CC000AE7446 /* Models */,
 				E859FBD020FE9CB400AE7446 /* Views */,
 				E859FBCF20FE9C9B00AE7446 /* ViewControllers */,
@@ -134,10 +146,17 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+		E8946C7C21011BD000351C64 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E8946C7A21011BC300351C64 /* AddStuff.storyboard */,
+=======
 		E85E9CC4210117E000B8D663 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				E8946C782101186200351C64 /* AddStuff.storyboard */,
+>>>>>>> 828bccbbdab1b0043580c0d16d94e3dfad39d6ed
 				E859FBC620FE99EA00AE7446 /* LaunchScreen.storyboard */,
 				E859FBBE20FE99E900AE7446 /* Main.storyboard */,
 			);
@@ -205,7 +224,11 @@
 				E859FBC820FE99EA00AE7446 /* LaunchScreen.storyboard in Resources */,
 				E859FBC520FE99EA00AE7446 /* Assets.xcassets in Resources */,
 				E859FBC020FE99E900AE7446 /* Main.storyboard in Resources */,
+<<<<<<< HEAD
+				E8946C7B21011BC300351C64 /* AddStuff.storyboard in Resources */,
+=======
 				E8946C792101186200351C64 /* AddStuff.storyboard in Resources */,
+>>>>>>> 828bccbbdab1b0043580c0d16d94e3dfad39d6ed
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
