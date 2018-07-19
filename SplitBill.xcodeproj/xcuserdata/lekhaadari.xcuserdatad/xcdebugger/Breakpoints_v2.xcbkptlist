@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SplitBill/ViewControllers/AddMembersViewController.swift"
+            timestampString = "553713120.822069"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SplitBill/ViewControllers/SelectItemsViewController.swift"
+            timestampString = "553713120.8223799"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "SelectItemsViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SplitBill/ViewControllers/SelectItemsViewController.swift"
+            timestampString = "553713120.8253"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "SelectItemsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SplitBill.SelectItemsViewController.member.getter : SplitBill.Person"
+                  moduleName = "SplitBill"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lekhaadari/Desktop/Make%20School%20Projects/SplitBill/SplitBill/ViewControllers/SelectItemsViewController.swift"
+                  timestampString = "553713121.933903"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SplitBill.SelectItemsViewController.member.setter : SplitBill.Person"
+                  moduleName = "SplitBill"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lekhaadari/Desktop/Make%20School%20Projects/SplitBill/SplitBill/ViewControllers/SelectItemsViewController.swift"
+                  timestampString = "553713121.940129"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SplitBill.SelectItemsViewController.init(style: __C.UITableViewStyle) -&gt; SplitBill.SelectItemsViewController"
+                  moduleName = "SplitBill"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lekhaadari/Desktop/Make%20School%20Projects/SplitBill/SplitBill/ViewControllers/SelectItemsViewController.swift"
+                  timestampString = "553713121.946557"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "151">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SplitBill.SelectItemsViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; SplitBill.SelectItemsViewController"
+                  moduleName = "SplitBill"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lekhaadari/Desktop/Make%20School%20Projects/SplitBill/SplitBill/ViewControllers/SelectItemsViewController.swift"
+                  timestampString = "553713121.951388"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "191">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SplitBill.SelectItemsViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;SplitBill.SelectItemsViewController&gt;"
+                  moduleName = "SplitBill"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lekhaadari/Desktop/Make%20School%20Projects/SplitBill/SplitBill/ViewControllers/SelectItemsViewController.swift"
+                  timestampString = "553713121.955484"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "118">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
