@@ -12,12 +12,14 @@ import UIKit
 class TotalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var bill = Bill(members: [], items: [])
     var person = Person(name: "Name")
+    
     @IBOutlet weak var totalTableView: TotalTableView!
+    @IBOutlet weak var grandTotalLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         totalTableView.bill = bill
-        //print(bill.total)
+        grandTotalLabel.text = "$" + String(format:"%.2f", bill.total)
         totalTableView.reloadData()
         
     }
@@ -30,7 +32,7 @@ class TotalViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "personTotalViewCell", for: indexPath) as! TotalTableViewCell
         let person = bill.people[indexPath.row]
         cell.personNameLabel.text = person.name
-        cell.personTotalLabel.text = String(format:"%.2f", person.total)
+        cell.personTotalLabel.text = "$" + String(format:"%.2f", person.total)
         
         return cell
     }
