@@ -29,11 +29,12 @@ class AddMembersViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personCellView", for: indexPath) as! MemberCellView
         let person = bill.people[indexPath.row]
         cell.nameLabel.text = person.name
+        person.calculateSubtotal()
         cell.personSubtotalLabel.text = String(format:"%.2f", person.subtotal)
         
         return cell
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 1
         return bill.people.count
@@ -83,6 +84,25 @@ class AddMembersViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        var person = bill.people[indexPath.row]
+        for item in person.items {
+            item.numPeople -= 1
+            item.recalculateDividedPrice()
+            print(item.numPeople)
+            print(item.dividedPrice)
+        }
+        
+        if editingStyle == .delete {
+            bill.people.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            self.tableView.reloadData()
+        }
+        
+        
+    }
+    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else {return}
         
