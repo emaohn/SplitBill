@@ -28,6 +28,7 @@
 		E85E9CBF2100FB0F00B8D663 /* BreakdownTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85E9CBE2100FB0F00B8D663 /* BreakdownTableView.swift */; };
 		E85E9CC32100FD9100B8D663 /* BreakdownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85E9CC22100FD9100B8D663 /* BreakdownTableViewCell.swift */; };
 		E8946C8121012B7900351C64 /* tipTaxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8946C8021012B7900351C64 /* tipTaxViewController.swift */; };
+		E8946C872102862F00351C64 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8946C862102862F00351C64 /* LaunchScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		E85E9CBE2100FB0F00B8D663 /* BreakdownTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakdownTableView.swift; sourceTree = "<group>"; };
 		E85E9CC22100FD9100B8D663 /* BreakdownTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakdownTableViewCell.swift; sourceTree = "<group>"; };
 		E8946C8021012B7900351C64 /* tipTaxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipTaxViewController.swift; sourceTree = "<group>"; };
+		E8946C862102862F00351C64 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		E859FBCF20FE9C9B00AE7446 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E8946C862102862F00351C64 /* LaunchScreenViewController.swift */,
 				E85E9CBA2100FA7B00B8D663 /* BreakdownViewController.swift */,
 				E859FBE620FEB4E900AE7446 /* AddStuffViewController.swift */,
 				E859FBDE20FEA3E500AE7446 /* AddMembersViewController.swift */,
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8946C872102862F00351C64 /* LaunchScreenViewController.swift in Sources */,
 				E85E9CC32100FD9100B8D663 /* BreakdownTableViewCell.swift in Sources */,
 				44551AF020FFE8230056E805 /* TotalTableView.swift in Sources */,
 				E859FBC320FE99E900AE7446 /* SplitBill.xcdatamodeld in Sources */,
