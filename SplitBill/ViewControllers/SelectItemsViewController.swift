@@ -50,7 +50,7 @@ class SelectItemsViewController: UITableViewController {
                 cell.accessoryType = .none
                 let item = bill.allItems[indexPath.row]
                 for index in 0...(member?.items.count)! {
-                    if item.name == (member?.items[index].name)! {
+                    if item.name == (member?.items[index].name)! && item.price == (member?.items[index].price)! {
                         member?.items.remove(at: index)
                         item.numPeople -= 1
                         item.recalculateDividedPrice()

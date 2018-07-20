@@ -67,6 +67,25 @@ class AddStuffViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let deletedItem = bill.allItems[indexPath.row]
+            for person in bill.people {
+                for index in 0...person.items.count {
+                    if deletedItem.name == person.items[index].name && deletedItem.price == person.items[index].price {
+                        person.items.remove(at: index)
+                    }
+                    break
+                }
+            }
+            bill.allItems.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            self.tableView.reloadData()
+            
+            
+        }
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is tipTaxViewController {
             let vc = segue.destination as? tipTaxViewController
