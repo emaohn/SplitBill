@@ -257,6 +257,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="E6S-hB-H1S" kind="show" identifier="moveToSelectItems" id="3Vi-jQ-qKt"/>
+                        <segue destination="E6S-hB-H1S" kind="show" identifier="editPersonItems" id="yFp-In-7qM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1G-fm-lXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -635,4 +636,7 @@
             <point key="canvasLocation" x="18.399999999999999" y="-58.020989505247378"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yFp-In-7qM"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -10,6 +10,6 @@ import Foundation
 import UIKit
 
 class BreakdownTableView: UITableView {
-    var bill = Bill(members: [], items: [])
+    var bill = Bill()
     
 }

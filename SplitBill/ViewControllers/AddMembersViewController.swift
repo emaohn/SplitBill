@@ -13,6 +13,7 @@ class AddMembersViewController: UITableViewController {
 //    var members = [Person]()
 //    var items = [Item]()
     var personName: String = ""
+    var person: Person?
     var bill = Bill()
 //    var tax = 0.0
 //    var tip = 0.0
@@ -39,6 +40,11 @@ class AddMembersViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        person = bill.people[indexPath.row]
+        self.performSegue(withIdentifier: "editPersonItems", sender: self)
+    }
+    
     func addMembersButtonPressed(_ sender: Any) {
         // Create the alert controller
         let alertController = UIAlertController(title: "Person's Name", message: "", preferredStyle: UIAlertControllerStyle.alert)
@@ -50,6 +56,8 @@ class AddMembersViewController: UITableViewController {
             UIAlertAction in
             if let personNameTextField = alertController.textFields![0] as UITextField? {
                 self.personName = personNameTextField.text!
+                self.person = Person(name: self.personName)
+                self.bill.people.append(self.person!)
                 self.performSegue(withIdentifier: "moveToSelectItems", sender: self)
             } else {return}
         }
@@ -94,9 +102,12 @@ class AddMembersViewController: UITableViewController {
                 vc?.bill = self.bill
         case "moveToSelectItems":
             let vc = segue.destination as? SelectItemsViewController
-//            vc?.items = self.items
-           vc?.member.name = self.personName
-                vc?.bill = self.bill
+            vc?.bill = self.bill
+            vc?.member = self.person!
+        case "editPersonItems":
+            let vc = segue.destination as? SelectItemsViewController
+            vc?.bill = self.bill
+            vc?.member = self.person!    
 
         default:
             print("i dont recognize this")

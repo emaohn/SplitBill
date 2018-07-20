@@ -11,13 +11,13 @@ import UIKit
 
 class SelectItemsViewController: UITableViewController {
 //    var items = [Item]()
-    var member = Person(name: "Name")
+    var member: Person?
     var bill = Bill()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    }    
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bill.allItems.count
@@ -28,6 +28,11 @@ class SelectItemsViewController: UITableViewController {
         let item = bill.allItems[indexPath.row]
         cell.itemNameLabel.text = item.name
         cell.priceLabel.text = String(format:"%.2f", item.price)
+        for memberItem in (member?.items)! {
+            if item.name == memberItem.name {
+                cell.accessoryType = .checkmark
+            }
+        }
     
         return cell
     }
@@ -37,15 +42,15 @@ class SelectItemsViewController: UITableViewController {
             if cell.accessoryType == .none {
                 cell.accessoryType = .checkmark
                 let item = bill.allItems[indexPath.row]
-                member.items.append(item)
+                member?.items.append(item)
                 item.numPeople += 1
                 item.recalculateDividedPrice()
             } else if cell.accessoryType == .checkmark {
                 cell.accessoryType = .none
                 let item = bill.allItems[indexPath.row]
-                for index in 0...member.items.count {
-                    if item.name == member.items[index].name {
-                        member.items.remove(at: index)
+                for index in 0...(member?.items.count)! {
+                    if item.name == (member?.items[index].name)! {
+                        member?.items.remove(at: index)
                         item.numPeople -= 1
                         item.recalculateDividedPrice()
                         break
@@ -64,7 +69,6 @@ class SelectItemsViewController: UITableViewController {
     
         case "doneSelectItems":
             let vc = segue.destination as! AddMembersViewController
-            vc.bill.people.append(self.member)
             
         default:
             print("i dont recognize this")
