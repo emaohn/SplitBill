@@ -245,7 +245,7 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="done" id="U1p-er-YCk">
                                 <connections>
-                                    <segue destination="aAd-mO-HtZ" kind="show" identifier="doneWithPersons" id="trR-Wj-apD"/>
+                                    <action selector="doneWithMembersPressed:" destination="jjJ-Lf-go9" id="kiP-QK-LuQ"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="add" id="1gf-af-1bV">
@@ -258,6 +258,7 @@
                     <connections>
                         <segue destination="E6S-hB-H1S" kind="show" identifier="moveToSelectItems" id="3Vi-jQ-qKt"/>
                         <segue destination="E6S-hB-H1S" kind="show" identifier="editPersonItems" id="yFp-In-7qM"/>
+                        <segue destination="aAd-mO-HtZ" kind="show" identifier="doneWithPersons" id="Wbf-aF-6ML"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1G-fm-lXc" userLabel="First Responder" sceneMemberID="firstResponder"/>

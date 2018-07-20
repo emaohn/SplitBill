@@ -41,6 +41,55 @@ class AddMembersViewController: UITableViewController {
         
     }
     
+    @IBAction func doneWithMembersPressed(_ sender: Any) {
+        
+        var notSelectedItems = [Item]()
+        
+        for item in bill.allItems {
+            if item.numPeople == 0 {
+                notSelectedItems.append(item)
+            }
+        }
+        
+        if notSelectedItems.count > 0 {
+            alert(notSelectedItems: notSelectedItems)
+        }
+        else {
+            self.performSegue(withIdentifier: "doneWithPersons", sender: self)
+        }
+    }
+    
+    func convertToString(items: [Item])-> String{
+        var ret: String = "/n"
+        for item in items {
+            ret += item.name + "\n"
+        }
+        return ret
+    }
+    
+    func alert(notSelectedItems: [Item]){
+        let alertController = UIAlertController(title: "WARNING", message: "You have items that have not been claimed! They are: \(convertToString(items: notSelectedItems))", preferredStyle: UIAlertControllerStyle.alert)
+        // Create the actions
+        let okAction = UIAlertAction(title: "Force Continue", style: UIAlertActionStyle.default) {
+            UIAlertAction in
+            self.performSegue(withIdentifier: "doneWithPersons", sender: self)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Fix", style: UIAlertActionStyle.cancel) {
+            UIAlertAction in
+            NSLog("Fix Pressed")
+        }
+        
+        // Add the actions
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        
+        // Present the controller
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
+    
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         person = bill.people[indexPath.row]
         self.performSegue(withIdentifier: "editPersonItems", sender: self)
@@ -108,11 +157,6 @@ class AddMembersViewController: UITableViewController {
         
         switch identifier {
         case "doneWithPersons":
-            print("done w ppl")
-            print(bill.total)
-//            let bill = Bill(members: members, items: items)
-//            bill.taxAmount = tax
-//            bill.tipPercent = tip
             let vc = segue.destination as? TotalViewController
             vc?.bill = bill
         case "backButton":
