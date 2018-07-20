@@ -16,6 +16,7 @@ class SelectItemsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Select \(member!.name)'s Items"
 
     }
     

@@ -544,7 +544,7 @@
             </objects>
             <point key="canvasLocation" x="1709.5999999999999" y="1368.6656671664168"/>
         </scene>
-        <!--Select Items-->
+        <!--Check Off Items for Person-->
         <scene sceneID="ykS-lv-0qd">
             <objects>
                 <tableViewController id="E6S-hB-H1S" customClass="SelectItemsViewController" customModule="SplitBill" customModuleProvider="target" sceneMemberID="viewController">
@@ -599,7 +599,7 @@
                             <outlet property="delegate" destination="E6S-hB-H1S" id="XCQ-bT-OL5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Select Items" id="rSm-pP-Zy9">
+                    <navigationItem key="navigationItem" title="Check Off Items for Person" id="rSm-pP-Zy9">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zuq-BR-kPW">
                             <connections>
                                 <segue destination="ZQY-mx-rkq" kind="unwind" identifier="cancelSelectItems" unwindAction="unwindWithSegue:" id="HkF-Dx-CEG"/>
@@ -637,6 +637,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yFp-In-7qM"/>
+        <segue reference="3Vi-jQ-qKt"/>
     </inferredMetricsTieBreakers>
 </document>
