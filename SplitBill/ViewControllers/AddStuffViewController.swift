@@ -24,7 +24,8 @@ class AddStuffViewController: UITableViewController {
             textField.placeholder = "Enter Item Name"
         }
         alertController.addTextField { (textField : UITextField!) -> Void in
-            textField.placeholder = "Decimal Price w/o Dollar Sign:)"
+            textField.placeholder = "Enter Price"
+            textField.keyboardType = .decimalPad
         }
         // Create the actions
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
