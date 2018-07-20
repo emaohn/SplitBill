@@ -9,8 +9,8 @@
 import Foundation
 
 class Bill {
-        var tipPercent: Double = 0.15
-        var taxAmount: Double = 10.00
+        var tipPercent: Double = 0
+        var taxAmount: Double = 0
         var allItems: [Item] = []
         var total: Double = 0
         var subtotal: Double = 0
@@ -19,21 +19,16 @@ class Bill {
     init() {
         
     }
-    init(members: [Person], items: [Item]){
-        self.allItems = items
-        for item in allItems {
-            subtotal += item.price
-        }
-        people = members
-        calculate()
-        total = Double((tipPercent*subtotal + subtotal + taxAmount))
-    }
-    
     
     func calculateMemberTaxAmount(person: Person) -> Double{
         let tax = taxAmount * (person.subtotal / subtotal)
         person.tax = tax
+        
+        print("person subtotal: \(person.subtotal)")
+        print("tax: \(person.tax)")
+        print("bill subtotal: \(subtotal) bill's tax: \(tax)")
         return tax
+        
     }
     
     func calculateMemberTipAmount(person: Person) -> Double{
@@ -47,12 +42,15 @@ class Bill {
     }
     
     func calculate(){
+        total = 0
+        subtotal = 0
         for item in allItems {
             subtotal += item.price
         }
-        total = Double((tipPercent*subtotal + subtotal + taxAmount))
+       // total = Double((tipPercent*subtotal + subtotal + taxAmount))
         for person in people {
             person.total = totalMemberAmount(person: person)
+            total += person.total
         }
     }
 }
