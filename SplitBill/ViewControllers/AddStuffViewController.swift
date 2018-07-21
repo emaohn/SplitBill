@@ -20,8 +20,12 @@ class AddStuffViewController: UITableViewController {
     @IBAction func addItemButtonPressed(_ sender: UIBarButtonItem) {
         // Create the alert controller
         let alertController = UIAlertController(title: "Add Item", message: "", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let subview = (alertController.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
+        subview.backgroundColor = UIColor(red: 201/255, green: 200/255, blue: 209/255, alpha: 1)
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "Enter Item Name"
+            
         }
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "Enter Price"

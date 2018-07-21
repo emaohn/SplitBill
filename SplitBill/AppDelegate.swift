@@ -15,8 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        UITextField.appearance().keyboardAppearance = .dark
         // Override point for customization after application launch.
-
+        //NavigationBar will contain these default parameters
+        UINavigationBar.appearance().tintColor = .white
+        // This will set the nav bar color to a light red color
+        UINavigationBar.appearance().barTintColor = UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1)
+        // This will disable the navbar's translucency
+        UINavigationBar.appearance().isTranslucent = false
+        // When the tablview is scrolled, this will resize the title text
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        // This will make nav bar's font bold
+        UINavigationBar.appearance().prefersLargeTitles = true
+        // Set the color of the font to white
+        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         return true
     }
 
