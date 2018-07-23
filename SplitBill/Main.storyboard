@@ -245,7 +245,7 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="done" id="U1p-er-YCk">
                                 <connections>
-                                    <segue destination="aAd-mO-HtZ" kind="show" identifier="doneWithPersons" id="trR-Wj-apD"/>
+                                    <action selector="doneWithMembersPressed:" destination="jjJ-Lf-go9" id="kiP-QK-LuQ"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="add" id="1gf-af-1bV">
@@ -257,6 +257,8 @@
                     </navigationItem>
                     <connections>
                         <segue destination="E6S-hB-H1S" kind="show" identifier="moveToSelectItems" id="3Vi-jQ-qKt"/>
+                        <segue destination="E6S-hB-H1S" kind="show" identifier="editPersonItems" id="yFp-In-7qM"/>
+                        <segue destination="aAd-mO-HtZ" kind="show" identifier="doneWithPersons" id="Wbf-aF-6ML"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1G-fm-lXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -543,7 +545,7 @@
             </objects>
             <point key="canvasLocation" x="1709.5999999999999" y="1368.6656671664168"/>
         </scene>
-        <!--Select Items-->
+        <!--Check Off Items for Person-->
         <scene sceneID="ykS-lv-0qd">
             <objects>
                 <tableViewController id="E6S-hB-H1S" customClass="SelectItemsViewController" customModule="SplitBill" customModuleProvider="target" sceneMemberID="viewController">
@@ -598,7 +600,7 @@
                             <outlet property="delegate" destination="E6S-hB-H1S" id="XCQ-bT-OL5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Select Items" id="rSm-pP-Zy9">
+                    <navigationItem key="navigationItem" title="Check Off Items for Person" id="rSm-pP-Zy9">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zuq-BR-kPW">
                             <connections>
                                 <segue destination="ZQY-mx-rkq" kind="unwind" identifier="cancelSelectItems" unwindAction="unwindWithSegue:" id="HkF-Dx-CEG"/>
@@ -635,4 +637,7 @@
             <point key="canvasLocation" x="18.399999999999999" y="-58.020989505247378"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="3Vi-jQ-qKt"/>
+    </inferredMetricsTieBreakers>
 </document>

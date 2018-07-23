@@ -10,8 +10,6 @@ import Foundation
 import UIKit
 
 class tipTaxViewController: UIViewController {
-//    var items = [Item]()
-//    var members = [Person]()
       var bill = Bill()
     
     @IBOutlet weak var taxAmountTextfield: UITextField!
@@ -27,8 +25,6 @@ class tipTaxViewController: UIViewController {
         case "done":
             if segue.destination is AddMembersViewController {
                 let vc = segue.destination as? AddMembersViewController
-//                vc?.bill.allItems = self.items
-//                vc?.bill.members = self.members
                   vc?.bill = self.bill
                 if let taxAmount = Double((taxAmountTextfield.text!)) {
                     vc?.bill.taxAmount = taxAmount
