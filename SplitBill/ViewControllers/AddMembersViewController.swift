@@ -19,16 +19,22 @@ class AddMembersViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     @IBAction func addButtonPressed(_ sender: Any) {
         addMembersButtonPressed(self)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "personCellView", for: indexPath) as! MemberCellView
         let person = bill.people[indexPath.row]
         cell.nameLabel.text = person.name
+        bill.people[indexPath.row].calculateSubtotal()
         cell.personSubtotalLabel.text = String(format:"%.2f", person.subtotal)
+        
+        
         
         return cell
     }
@@ -67,7 +73,23 @@ class AddMembersViewController: UITableViewController {
         self.present(alertController, animated: true, completion: nil)
     }
 
-    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        var person = bill.people[indexPath.row]
+        for item in person.items {
+            item.numPeople -= 1
+            item.recalculateDividedPrice()
+            print(item.numPeople)
+            print(item.dividedPrice)
+        }
+   
+        if editingStyle == .delete {
+            bill.people.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            self.tableView.reloadData()
+        }
+        
+        
+    }
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
         for member in bill.people {
             member.calculateSubtotal()
